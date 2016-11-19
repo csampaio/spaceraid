@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Event sheet 1</name>
+    <name>MainEvents</name>
     <events>
         <variable constant="0" name="maxSpeed" sid="247631701283677" static="0" type="number">300</variable>
         <event-block sid="771379240099245">

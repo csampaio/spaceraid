@@ -175,13 +175,13 @@
     </object-folder>
     <families />
     <layout-folder>
-        <layout>Layout 1.xml</layout>
+        <layout>MainLayout.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>MainEvents.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="4" />
+        <global-instance type="Keyboard" uid="30" />
     </global-instances>
     <sounds-folder />
     <music-folder />

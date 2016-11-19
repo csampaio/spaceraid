@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Layout 1</name>
+    <name>MainLayout</name>
     <sid>417420598265263</sid>
-    <event-sheet>Event sheet 1</event-sheet>
+    <event-sheet>MainEvents</event-sheet>
     <size>
         <width>480</width>
         <height>5000</height>
@@ -353,7 +353,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="PlayerName" uid="3">
+                <instance type="PlayerName" uid="4">
                     <properties>
                         <text>Player 1</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -380,7 +380,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Fuel1" uid="4">
+                <instance type="Fuel1" uid="10">
                     <properties>
                         <value>50</value>
                         <minimum>0</minimum>
@@ -404,7 +404,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="Score1" uid="5">
+                <instance type="Score1" uid="11">
                     <properties>
                         <text>Score: 0</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -431,7 +431,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FuelText" uid="6">
+                <instance type="FuelText" uid="12">
                     <properties>
                         <text>F</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -458,7 +458,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FuelText" uid="7">
+                <instance type="FuelText" uid="13">
                     <properties>
                         <text>E</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -485,7 +485,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PlayerName" uid="8">
+                <instance type="PlayerName" uid="14">
                     <properties>
                         <text>Player 2</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -512,7 +512,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FuelText" uid="9">
+                <instance type="FuelText" uid="15">
                     <properties>
                         <text>F</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -539,7 +539,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FuelText" uid="10">
+                <instance type="FuelText" uid="16">
                     <properties>
                         <text>E</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -566,7 +566,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Score2" uid="11">
+                <instance type="Score2" uid="17">
                     <properties>
                         <text>Score: 0</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -593,7 +593,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Fuel2" uid="12">
+                <instance type="Fuel2" uid="18">
                     <properties>
                         <value>50</value>
                         <minimum>0</minimum>
@@ -617,7 +617,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="PlayerName" uid="13">
+                <instance type="PlayerName" uid="19">
                     <properties>
                         <text>Player 1</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -644,7 +644,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FuelText" uid="14">
+                <instance type="FuelText" uid="20">
                     <properties>
                         <text>E</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -671,7 +671,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Fuel1" uid="15">
+                <instance type="Fuel1" uid="21">
                     <properties>
                         <value>50</value>
                         <minimum>0</minimum>
@@ -695,7 +695,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="Score1" uid="16">
+                <instance type="Score1" uid="22">
                     <properties>
                         <text>Score: 0</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -722,7 +722,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FuelText" uid="17">
+                <instance type="FuelText" uid="23">
                     <properties>
                         <text>F</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -749,7 +749,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PlayerName" uid="18">
+                <instance type="PlayerName" uid="24">
                     <properties>
                         <text>Player 2</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -776,7 +776,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FuelText" uid="19">
+                <instance type="FuelText" uid="25">
                     <properties>
                         <text>E</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -803,7 +803,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FuelText" uid="20">
+                <instance type="FuelText" uid="26">
                     <properties>
                         <text>F</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -830,7 +830,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Fuel2" uid="21">
+                <instance type="Fuel2" uid="27">
                     <properties>
                         <value>50</value>
                         <minimum>0</minimum>
@@ -854,7 +854,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="Score2" uid="22">
+                <instance type="Score2" uid="28">
                     <properties>
                         <text>Score: 0</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -881,7 +881,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="23">
+                <instance type="Text" uid="29">
                     <properties>
                         <text>Player 1 Campeão!</text>
                         <initial-visibility>Invisible</initial-visibility>
