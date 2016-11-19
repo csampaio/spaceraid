@@ -10,6 +10,7 @@
     <unique-id>qn7hprmcxq99</unique-id>
     <saved-with-version>23900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
     </used-plugins>
     <used-behaviors>
@@ -71,14 +72,11 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="plane" sid="643015605162437">
+        <object-type name="player1" sid="643015605162437">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="BoundToLayout" sid="567103790923206">
                     <behavior id="bound" />
-                </behavior-type>
-                <behavior-type name="8Direction" sid="752863239452921">
-                    <behavior id="EightDir" />
                 </behavior-type>
                 <behavior-type name="Solid" sid="347822201958664">
                     <behavior id="solid" />
@@ -86,18 +84,68 @@
                 <behavior-type name="ScrollTo" sid="994685474296457">
                     <behavior id="scrollto" />
                 </behavior-type>
+                <behavior-type name="8Direction" sid="309381424894891">
+                    <behavior id="EightDir" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="319798763930259" speed="5">
-                    <frame duration="1" hotspotX="0.456853" hotspotY="0.573171">
+                    <frame duration="1" hotspotX="0.489286" hotspotY="0.502825" original-source="G:\Pós Games\spaceraid\Files\nave - space raid.png">
                         <collision-poly>
-                            <point x="0.461929" y="0.00609756" />
-                            <point x="0.456852" y="0" />
-                            <point x="1" y="0.682927" />
-                            <point x="0.48731" y="1" />
-                            <point x="0.0101523" y="0.826219" />
+                            <point x="0.710714" y="0.305085" />
+                            <point x="0.982143" y="0.499058" />
+                            <point x="0.710714" y="0.694915" />
+                            <point x="0.5" y="0.990584" />
+                            <point x="0.319643" y="0.6629" />
+                            <point x="0.0589285" y="0.499058" />
+                            <point x="0.319643" y="0.3371" />
+                            <point x="0.5" y="0.0112994" />
                         </collision-poly>
                     </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="player2" sid="144965379793408">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="BoundToLayout" sid="349661985599235">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="964378715794542">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="442664656944546">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="827894743614430">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="631183821036950" speed="5">
+                    <frame duration="1" hotspotX="0.489286" hotspotY="0.502825" original-source="G:\Pós Games\spaceraid\Files\nave - space raid.png">
+                        <collision-poly>
+                            <point x="0.710714" y="0.305085" />
+                            <point x="0.982143" y="0.499058" />
+                            <point x="0.710714" y="0.694915" />
+                            <point x="0.5" y="0.990584" />
+                            <point x="0.319643" y="0.6629" />
+                            <point x="0.0589285" y="0.499058" />
+                            <point x="0.319643" y="0.3371" />
+                            <point x="0.5" y="0.0112994" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="892234908512038">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="boost" sid="429115014038193">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="372882178196375" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -109,7 +157,9 @@
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
-    <global-instances />
+    <global-instances>
+        <global-instance type="Keyboard" uid="4" />
+    </global-instances>
     <sounds-folder />
     <music-folder />
     <files-folder>

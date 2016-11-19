@@ -2,5 +2,162 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
-    <events />
+    <events>
+        <variable constant="0" name="maxSpeed" sid="247631701283677" static="0" type="number">300</variable>
+        <event-block sid="771379240099245">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="658288997799485" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="4" name="Set max speed" sid="121515076884490" type="player1">
+                    <param id="0" name="Max Speed">maxSpeed</param>
+                </action>
+                <action behavior="8Direction" id="4" name="Set max speed" sid="690634968632260" type="player2">
+                    <param id="0" name="Max Speed">maxSpeed</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="273001004595529" title="Player 1 Controls">
+            <sub-events>
+                <event-block sid="679774110710486">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="669924435437784" type="Keyboard">
+                            <param id="0" name="Key">87 (W)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="898253473205702" type="player1">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="514716860338546">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="728872807286549" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="897768123125846" type="player1">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="498399977471918">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="391750080699760" type="Keyboard">
+                            <param id="0" name="Key">68 (D)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="861858337249221" type="player1">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="691140247880223">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="483006369876684" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="3" name="Set speed" sid="339463949938711" type="player1">
+                            <param id="0" name="Speed">player1.8Direction.Speed-100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="790151841758226" title="Player 2 Controls">
+            <sub-events>
+                <event-block sid="936070978865901">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="301151439684987" type="Keyboard">
+                            <param id="0" name="Key">38 (Up arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="305346598415392" type="player2">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="767058311535441">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="340410068736592" type="Keyboard">
+                            <param id="0" name="Key">37 (Left arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="379499825871628" type="player2">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="474276527200161">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="759949545295307" type="Keyboard">
+                            <param id="0" name="Key">39 (Right arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="958997511122002" type="player2">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="550135518094449">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="638687634438124" type="Keyboard">
+                            <param id="0" name="Key">96 (Num 0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="3" name="Set speed" sid="260333359968398" type="player2">
+                            <param id="0" name="Speed">player2.8Direction.Speed-100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="776907293983968">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="415278214073022" type="player1">
+                    <param id="0" name="Object">boost</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="604017842191431" type="boost" />
+                <action behavior="8Direction" id="4" name="Set max speed" sid="869874307011663" type="player1">
+                    <param id="0" name="Max Speed">Self.8Direction.MaxSpeed+150</param>
+                </action>
+                <action id="-16" name="Wait" sid="501518073654510" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action behavior="8Direction" id="4" name="Set max speed" sid="775388660708481" type="player1">
+                    <param id="0" name="Max Speed">Self.8Direction.MaxSpeed-150</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="319784740094716">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="521072962124290" type="player2">
+                    <param id="0" name="Object">boost</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="978278636697454" type="boost" />
+                <action behavior="8Direction" id="4" name="Set max speed" sid="415850714547935" type="player2">
+                    <param id="0" name="Max Speed">Self.8Direction.MaxSpeed+150</param>
+                </action>
+                <action id="-16" name="Wait" sid="187162509859358" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action behavior="8Direction" id="4" name="Set max speed" sid="256912392083385" type="player2">
+                    <param id="0" name="Max Speed">Self.8Direction.MaxSpeed-150</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>
