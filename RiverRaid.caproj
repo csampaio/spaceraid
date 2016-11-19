@@ -8,9 +8,16 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>qn7hprmcxq99</unique-id>
-    <saved-with-version>23300</saved-with-version>
-    <used-plugins />
-    <used-behaviors />
+    <saved-with-version>23900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -37,7 +44,64 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder />
+    <object-folder>
+        <object-type name="Terrain" sid="183601157262340">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="663099703529127">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="548625868900427" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.9" y="0" />
+                            <point x="0.632" y="0.205078" />
+                            <point x="0.732" y="0.348633" />
+                            <point x="0.776" y="0.449219" />
+                            <point x="0.584" y="0.552734" />
+                            <point x="0.538749" y="0.755859" />
+                            <point x="0.675" y="0.884766" />
+                            <point x="0.798" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="plane" sid="643015605162437">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="BoundToLayout" sid="567103790923206">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="752863239452921">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="347822201958664">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="994685474296457">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="319798763930259" speed="5">
+                    <frame duration="1" hotspotX="0.456853" hotspotY="0.573171">
+                        <collision-poly>
+                            <point x="0.461929" y="0.00609756" />
+                            <point x="0.456852" y="0" />
+                            <point x="1" y="0.682927" />
+                            <point x="0.48731" y="1" />
+                            <point x="0.0101523" y="0.826219" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
     <families />
     <layout-folder>
         <layout>Layout 1.xml</layout>
