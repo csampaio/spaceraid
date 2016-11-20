@@ -76,6 +76,10 @@
         </object-type>
         <object-type name="player1" sid="643015605162437">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Score" sid="558656017376806" type="number" />
+                <instance-variable name="Fuel" sid="606744685970409" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="BoundToLayout" sid="567103790923206">
                     <behavior id="bound" />
@@ -109,6 +113,10 @@
         </object-type>
         <object-type name="player2" sid="144965379793408">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Score" sid="798489350489468" type="number" />
+                <instance-variable name="Fuel" sid="934430484041837" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="BoundToLayout" sid="349661985599235">
                     <behavior id="bound" />

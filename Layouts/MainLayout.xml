@@ -241,6 +241,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Score>0</Score>
+                        <Fuel>50</Fuel>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
                             <properties>
@@ -291,6 +295,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Score>0</Score>
+                        <Fuel>50</Fuel>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="BoundToLayout">
                             <properties>
