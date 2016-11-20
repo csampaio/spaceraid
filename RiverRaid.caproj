@@ -57,17 +57,11 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="548625868900427" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="5.51163" hotspotY="1.01539" original-source="E:\projetos\PosUEA\spaceraid\Assets\Pedras laterais.png">
                         <collision-poly>
                             <point x="0" y="0" />
-                            <point x="0.9" y="0" />
-                            <point x="0.632" y="0.205078" />
-                            <point x="0.732" y="0.348633" />
-                            <point x="0.776" y="0.449219" />
-                            <point x="0.584" y="0.552734" />
-                            <point x="0.538749" y="0.755859" />
-                            <point x="0.675" y="0.884766" />
-                            <point x="0.798" y="1" />
+                            <point x="0.953488" y="0.0346249" />
+                            <point x="1" y="1" />
                             <point x="0" y="1" />
                         </collision-poly>
                     </frame>
@@ -179,6 +173,54 @@
         </object-type>
         <object-type name="Text" sid="965419683692569">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="WaterBg" sid="273238964401539">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="928445309101957" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\projetos\PosUEA\spaceraid\Assets\Água.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TerrainDir" sid="187698716055025">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="471569818595266">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="130910492467125" speed="5">
+                    <frame duration="1" hotspotX="0.502825" hotspotY="0.502564" original-source="E:\projetos\PosUEA\spaceraid\Assets\Penhasco Direita.png">
+                        <collision-poly>
+                            <point x="0.299435" y="0.0871795" />
+                            <point x="0.988701" y="0.0461539" />
+                            <point x="0.988701" y="0.871795" />
+                            <point x="0.288136" y="0.866667" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TerrainEsq" sid="458850715523648">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="822486269587651">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="690974396171127" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502564" original-source="E:\projetos\PosUEA\spaceraid\Assets\Penhasco esquerda.png">
+                        <collision-poly>
+                            <point x="0.00869565" y="0.0102564" />
+                            <point x="0.769564" y="0.0871795" />
+                            <point x="0.782609" y="0.866667" />
+                            <point x="0" y="0.85641" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
