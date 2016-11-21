@@ -159,5 +159,357 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="209530704003273" title="Lançadores">
+            <sub-events>
+                <event-block sid="531477413297463">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="965545161362931" type="System">
+                            <param id="0" name="Interval (seconds)">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="804271761909749" type="Launcher1">
+                            <param id="0" name="Object">Enemy1</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="557232901028770">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="535876978949906" type="System">
+                            <param id="0" name="Interval (seconds)">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="275279449019785" type="Launcher2">
+                            <param id="0" name="Object">Enemy2</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="376603373433955">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="872967682627199" type="System">
+                            <param id="0" name="Interval (seconds)">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="543508942534490" type="Launcher3">
+                            <param id="0" name="Object">Enemy3</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="171455570918327">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="987196508518537" type="System">
+                            <param id="0" name="Interval (seconds)">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="650834596845584" type="Launcher4">
+                            <param id="0" name="Object">Enemy4</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="836693000957234">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="753321232281093" type="System">
+                            <param id="0" name="Interval (seconds)">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="207729825075211" type="Launcher5">
+                            <param id="0" name="Object">Enemy5</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="187004173542619" title="Destroy">
+            <sub-events>
+                <event-block sid="530378243322665">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="564726392982158" type="Enemy1">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">-50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="704948734275676" type="Enemy1" />
+                    </actions>
+                </event-block>
+                <event-block sid="271973054926211">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="140411224722862" type="Enemy1">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">550</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="534308546261907" type="Enemy1" />
+                    </actions>
+                </event-block>
+                <event-block sid="159324931779851">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="374879806944083" type="Enemy2">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">-50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="376802513360064" type="Enemy2" />
+                    </actions>
+                </event-block>
+                <event-block sid="809812060970069">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="404410866905013" type="Enemy2">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">550</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="671294225065799" type="Enemy2" />
+                    </actions>
+                </event-block>
+                <event-block sid="840308736670100">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="249653652462626" type="Enemy3">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">-50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="799542463401298" type="Enemy3" />
+                    </actions>
+                </event-block>
+                <event-block sid="418544840014183">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="640588024277930" type="Enemy3">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">550</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="880584598064097" type="Enemy3" />
+                    </actions>
+                </event-block>
+                <event-block sid="468244185357112">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="796802965724659" type="Enemy4">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">-50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="653547943103385" type="Enemy4" />
+                    </actions>
+                </event-block>
+                <event-block sid="367319332531301">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="566530908616887" type="Enemy4">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">550</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="239556307835925" type="Enemy4" />
+                    </actions>
+                </event-block>
+                <event-block sid="925910946688999">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="141335617707729" type="Enemy5">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">-50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="323301996897086" type="Enemy5" />
+                    </actions>
+                </event-block>
+                <event-block sid="162446533757869">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="321437886519039" type="Enemy5">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">550</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="802636448279351" type="Enemy5" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="659322532211313" title="Enemy Collision">
+            <sub-events>
+                <event-block sid="417460205138628">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="595568697930073" type="player1">
+                            <param id="0" name="Object">Enemy1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="819465761094489" type="player1" />
+                        <action id="-9" name="Destroy" sid="902564536844431" type="Enemy1" />
+                        <action id="0" name="Spawn another object" sid="667662945846481" type="player1">
+                            <param id="0" name="Object">Explosion</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="768579390510095">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="796029133358579" type="player1">
+                            <param id="0" name="Object">Enemy2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="704822226959494" type="player1" />
+                        <action id="-9" name="Destroy" sid="559477296137519" type="Enemy2" />
+                        <action id="0" name="Spawn another object" sid="607242884460474" type="player1">
+                            <param id="0" name="Object">Explosion</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="983602779805022">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="486793923207281" type="player1">
+                            <param id="0" name="Object">Enemy3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="129643021712954" type="player1" />
+                        <action id="-9" name="Destroy" sid="524507999412726" type="Enemy3" />
+                        <action id="0" name="Spawn another object" sid="362945128153141" type="player1">
+                            <param id="0" name="Object">Explosion</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="961075322868887">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="211838908601155" type="player1">
+                            <param id="0" name="Object">Enemy4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="813412604363840" type="player1" />
+                        <action id="-9" name="Destroy" sid="896829641113439" type="Enemy4" />
+                        <action id="0" name="Spawn another object" sid="545739404013803" type="player1">
+                            <param id="0" name="Object">Explosion</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="889728367534248">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="212542933959501" type="player1">
+                            <param id="0" name="Object">Enemy5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="847553208096498" type="player1" />
+                        <action id="-9" name="Destroy" sid="594865084917756" type="Enemy5" />
+                        <action id="0" name="Spawn another object" sid="756003208687487" type="player1">
+                            <param id="0" name="Object">Explosion</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="930903578555072">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="933350945434549" type="player2">
+                            <param id="0" name="Object">Enemy1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="278903722992410" type="player2" />
+                        <action id="-9" name="Destroy" sid="910852035256179" type="Enemy1" />
+                        <action id="0" name="Spawn another object" sid="297804407160811" type="player2">
+                            <param id="0" name="Object">Explosion</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="888557998158458">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="895616725146647" type="player2">
+                            <param id="0" name="Object">Enemy2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="140256887747791" type="player2" />
+                        <action id="-9" name="Destroy" sid="386293716399451" type="Enemy2" />
+                        <action id="0" name="Spawn another object" sid="475294012408844" type="player2">
+                            <param id="0" name="Object">Explosion</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="652841268091013">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="185457202131152" type="player2">
+                            <param id="0" name="Object">Enemy3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="934088837739421" type="player2" />
+                        <action id="-9" name="Destroy" sid="349720297140356" type="Enemy3" />
+                        <action id="0" name="Spawn another object" sid="593075546874700" type="player2">
+                            <param id="0" name="Object">Explosion</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="433124582398436">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="128896405978350" type="player2">
+                            <param id="0" name="Object">Enemy4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="993833757753530" type="player2" />
+                        <action id="-9" name="Destroy" sid="668768869963649" type="Enemy4" />
+                        <action id="0" name="Spawn another object" sid="818603886070923" type="player2">
+                            <param id="0" name="Object">Explosion</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="702154873027492">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="964217286647745" type="player2">
+                            <param id="0" name="Object">Enemy5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="307049339221468" type="player2" />
+                        <action id="-9" name="Destroy" sid="254682273689701" type="Enemy5" />
+                        <action id="0" name="Spawn another object" sid="475646656695618" type="player2">
+                            <param id="0" name="Object">Explosion</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
