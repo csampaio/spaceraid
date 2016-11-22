@@ -172,7 +172,7 @@
         <object-type name="Fuel2" sid="126144877696568">
             <plugin id="sliderbar" />
         </object-type>
-        <object-type name="Text" sid="965419683692569">
+        <object-type name="WinnerText" sid="965419683692569">
             <plugin id="Text" />
         </object-type>
         <object-type name="WaterBg" sid="273238964401539">
@@ -534,14 +534,45 @@
             <animation-folder>
                 <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="273535861673670" speed="12">
                     <frame duration="1" hotspotX="0.508621" hotspotY="0.513043" />
-                    <frame duration="1" hotspotX="0.510638" hotspotY="0.510638" />
-                    <frame duration="1" hotspotX="0.510638" hotspotY="0.510638" />
-                    <frame duration="1" hotspotX="0.510638" hotspotY="0.510638" />
-                    <frame duration="1" hotspotX="0.510638" hotspotY="0.510638" />
-                    <frame duration="1" hotspotX="0.510638" hotspotY="0.510638" />
-                    <frame duration="1" hotspotX="0.510638" hotspotY="0.510638" />
-                    <frame duration="1" hotspotX="0.510638" hotspotY="0.510638" />
+                    <frame duration="1" hotspotX="0.508621" hotspotY="0.513043" />
+                    <frame duration="1" hotspotX="0.508621" hotspotY="0.513043" />
+                    <frame duration="1" hotspotX="0.508621" hotspotY="0.513043" />
+                    <frame duration="1" hotspotX="0.508621" hotspotY="0.513043" />
+                    <frame duration="1" hotspotX="0.508621" hotspotY="0.513043" />
+                    <frame duration="1" hotspotX="0.508621" hotspotY="0.513043" />
+                    <frame duration="1" hotspotX="0.508621" hotspotY="0.513043" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.504348" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bridge" sid="776061818851381">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="328353283624957">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="206270888325542" speed="5">
+                    <frame duration="1" hotspotX="0.502347" hotspotY="0.5" original-source="E:\projetos\PosUEA\spaceraid\Assets\Ponte.png">
+                        <collision-poly>
+                            <point x="0.084507" y="0.272727" />
+                            <point x="0.497653" y="0" />
+                            <point x="0.920188" y="0.257576" />
+                            <point x="0.953052" y="0.5" />
+                            <point x="0.99061" y="0.969697" />
+                            <point x="0.497653" y="0.742424" />
+                            <point x="0.00469484" y="0.984848" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WinnerFlag" sid="767158580741205">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="485609378784125" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\projetos\PosUEA\spaceraid\Assets\winflag.png" />
                 </animation>
             </animation-folder>
         </object-type>

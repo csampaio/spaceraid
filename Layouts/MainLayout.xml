@@ -243,6 +243,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="WinnerFlag" uid="49">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>240.5</x>
+                        <y>119</y>
+                        <z>0</z>
+                        <width>401</width>
+                        <height>240</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -490,8 +512,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>531</x>
-                        <y>4204</y>
+                        <x>534</x>
+                        <y>1301</y>
                         <z>0</z>
                         <width>62</width>
                         <height>50</height>
@@ -534,8 +556,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>517</x>
-                        <y>3633</y>
+                        <x>536</x>
+                        <y>4126</y>
                         <z>0</z>
                         <width>53</width>
                         <height>37</height>
@@ -556,8 +578,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-40</x>
-                        <y>3912</y>
+                        <x>-37</x>
+                        <y>1932</y>
                         <z>0</z>
                         <width>45</width>
                         <height>41</height>
@@ -578,8 +600,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>516</x>
-                        <y>4072</y>
+                        <x>535</x>
+                        <y>2643</y>
                         <z>0</z>
                         <width>42</width>
                         <height>46</height>
@@ -600,8 +622,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-42</x>
-                        <y>3578</y>
+                        <x>-48</x>
+                        <y>3118</y>
                         <z>0</z>
                         <width>57</width>
                         <height>47</height>
@@ -724,7 +746,7 @@
                         <height>73</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.506848991</hotspotY>
+                        <hotspotY>0.506849289</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -801,8 +823,8 @@
                         <width>93</width>
                         <height>67</height>
                         <depth>0</depth>
-                        <hotspotX>0.462365985</hotspotX>
-                        <hotspotY>0.522387981</hotspotY>
+                        <hotspotX>0.462365597</hotspotX>
+                        <hotspotY>0.522388041</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -825,6 +847,35 @@
                         <depth>0</depth>
                         <hotspotX>0.508620679</hotspotX>
                         <hotspotY>0.513043463</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Bridge" uid="48">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-138</x>
+                        <y>4304</y>
+                        <z>0</z>
+                        <width>213</width>
+                        <height>66</height>
+                        <depth>0</depth>
+                        <hotspotX>0.50234741</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1376,7 +1427,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="29">
+                <instance type="WinnerText" uid="29">
                     <properties>
                         <text>Player 1 Campeão!</text>
                         <initial-visibility>Invisible</initial-visibility>
