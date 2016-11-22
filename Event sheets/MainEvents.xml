@@ -65,6 +65,11 @@
                         <action behavior="8Direction" id="3" name="Set speed" sid="339463949938711" type="player1">
                             <param id="0" name="Speed">player1.8Direction.Speed-100</param>
                         </action>
+                        <action id="0" name="Spawn another object" sid="360383151875631" type="player1">
+                            <param id="0" name="Object">Laser</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -117,48 +122,15 @@
                         <action behavior="8Direction" id="3" name="Set speed" sid="260333359968398" type="player2">
                             <param id="0" name="Speed">player2.8Direction.Speed-100</param>
                         </action>
+                        <action id="0" name="Spawn another object" sid="739826169347309" type="player2">
+                            <param id="0" name="Object">Laser</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="776907293983968">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="415278214073022" type="player1">
-                    <param id="0" name="Object">boost</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="604017842191431" type="boost" />
-                <action behavior="8Direction" id="4" name="Set max speed" sid="869874307011663" type="player1">
-                    <param id="0" name="Max Speed">Self.8Direction.MaxSpeed+150</param>
-                </action>
-                <action id="-16" name="Wait" sid="501518073654510" type="System">
-                    <param id="0" name="Seconds">1</param>
-                </action>
-                <action behavior="8Direction" id="4" name="Set max speed" sid="775388660708481" type="player1">
-                    <param id="0" name="Max Speed">Self.8Direction.MaxSpeed-150</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="319784740094716">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="521072962124290" type="player2">
-                    <param id="0" name="Object">boost</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="978278636697454" type="boost" />
-                <action behavior="8Direction" id="4" name="Set max speed" sid="415850714547935" type="player2">
-                    <param id="0" name="Max Speed">Self.8Direction.MaxSpeed+150</param>
-                </action>
-                <action id="-16" name="Wait" sid="187162509859358" type="System">
-                    <param id="0" name="Seconds">1</param>
-                </action>
-                <action behavior="8Direction" id="4" name="Set max speed" sid="256912392083385" type="player2">
-                    <param id="0" name="Max Speed">Self.8Direction.MaxSpeed-150</param>
-                </action>
-            </actions>
-        </event-block>
         <event-group description="" sid="209530704003273" title="Lançadores">
             <sub-events>
                 <event-block sid="531477413297463">
@@ -541,85 +513,190 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="394577924618665">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="452415881247145" type="player1">
-                    <param id="0" name="Object">WinnerFlag</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="966712810239023" type="WinnerText">
-                    <param id="0" name="Text">&quot;Player 1 GANHOU!&quot;</param>
-                </action>
-                <action id="-15" name="Set visible" sid="232869134705078" type="WinnerText">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action behavior="8Direction" id="8" name="Set enabled" sid="515911842490002" type="player2">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action behavior="8Direction" id="8" name="Set enabled" sid="363138264366566" type="player1">
-                    <param id="0" name="State">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="165811639802451">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="431386550489617" type="player2">
-                    <param id="0" name="Object">WinnerFlag</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="262398567817837" type="WinnerText">
-                    <param id="0" name="Text">&quot;Player 2 GANHOU!&quot;</param>
-                </action>
-                <action id="-15" name="Set visible" sid="371497220819044" type="WinnerText">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action behavior="8Direction" id="8" name="Set enabled" sid="595203565007983" type="player1">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action behavior="8Direction" id="8" name="Set enabled" sid="447711987881118" type="player2">
-                    <param id="0" name="State">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="424892841490240">
-            <conditions>
-                <condition id="-19" name="On destroyed" sid="499588209037618" type="player1" />
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="465233384430202" type="WinnerText">
-                    <param id="0" name="Text">&quot;Player 2 GANHOU!&quot;</param>
-                </action>
-                <action id="-15" name="Set visible" sid="727978228902009" type="WinnerText">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action behavior="8Direction" id="8" name="Set enabled" sid="178268329724968" type="player2">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action id="11" name="Set collisions enabled" sid="273762095634076" type="player2">
-                    <param id="0" name="Collisions">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="750020551642449">
-            <conditions>
-                <condition id="-19" name="On destroyed" sid="707598890106975" type="player2" />
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="957284817588645" type="WinnerText">
-                    <param id="0" name="Text">&quot;Player 1 GANHOU!&quot;</param>
-                </action>
-                <action id="-15" name="Set visible" sid="862021126783660" type="WinnerText">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action behavior="8Direction" id="8" name="Set enabled" sid="254599473945832" type="player1">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action id="11" name="Set collisions enabled" sid="680498389293583" type="player1">
-                    <param id="0" name="Collisions">0</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="356244399981443" title="Win Rules">
+            <sub-events>
+                <event-block sid="394577924618665">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="452415881247145" type="player1">
+                            <param id="0" name="Object">WinnerFlag</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="966712810239023" type="WinnerText">
+                            <param id="0" name="Text">&quot;Player 1 GANHOU!&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="232869134705078" type="WinnerText">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="515911842490002" type="player2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="363138264366566" type="player1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="165811639802451">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="431386550489617" type="player2">
+                            <param id="0" name="Object">WinnerFlag</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="262398567817837" type="WinnerText">
+                            <param id="0" name="Text">&quot;Player 2 GANHOU!&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="371497220819044" type="WinnerText">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="595203565007983" type="player1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="447711987881118" type="player2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="424892841490240">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="499588209037618" type="player1" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="465233384430202" type="WinnerText">
+                            <param id="0" name="Text">&quot;Player 2 GANHOU!&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="727978228902009" type="WinnerText">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="178268329724968" type="player2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="273762095634076" type="player2">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="750020551642449">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="707598890106975" type="player2" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="957284817588645" type="WinnerText">
+                            <param id="0" name="Text">&quot;Player 1 GANHOU!&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="862021126783660" type="WinnerText">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="254599473945832" type="player1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="11" name="Set collisions enabled" sid="680498389293583" type="player1">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="896237673068941" title="Shoot">
+            <sub-events>
+                <event-block sid="252027267853722">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="446340066658925" type="Laser">
+                            <param id="0" name="Object">Enemy1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="995578640223856" type="Enemy1" />
+                        <action id="-9" name="Destroy" sid="420867329434071" type="Laser" />
+                    </actions>
+                </event-block>
+                <event-block sid="115046295020114">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="669816375192982" type="Laser">
+                            <param id="0" name="Object">Enemy2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="636434466321161" type="Enemy2" />
+                        <action id="-9" name="Destroy" sid="821368787390073" type="Laser" />
+                    </actions>
+                </event-block>
+                <event-block sid="349308931225411">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="640819796220872" type="Laser">
+                            <param id="0" name="Object">Enemy3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="830677844022400" type="Enemy3" />
+                        <action id="-9" name="Destroy" sid="337762834665062" type="Laser" />
+                    </actions>
+                </event-block>
+                <event-block sid="238555442693352">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="703134519507964" type="Laser">
+                            <param id="0" name="Object">Enemy4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="183337397665818" type="Enemy4" />
+                        <action id="-9" name="Destroy" sid="880051677376176" type="Laser" />
+                    </actions>
+                </event-block>
+                <event-block sid="194159883077343">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="624582476062008" type="Laser">
+                            <param id="0" name="Object">Enemy5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="671178625771657" type="Enemy5" />
+                        <action id="-9" name="Destroy" sid="758407194338056" type="Laser" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="405572551962587" title="Boost">
+            <sub-events>
+                <event-block sid="776907293983968">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="415278214073022" type="player1">
+                            <param id="0" name="Object">boost</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="604017842191431" type="boost" />
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="869874307011663" type="player1">
+                            <param id="0" name="Max Speed">Self.8Direction.MaxSpeed+150</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="501518073654510" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="775388660708481" type="player1">
+                            <param id="0" name="Max Speed">Self.8Direction.MaxSpeed-150</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="319784740094716">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="521072962124290" type="player2">
+                            <param id="0" name="Object">boost</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="978278636697454" type="boost" />
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="415850714547935" type="player2">
+                            <param id="0" name="Max Speed">Self.8Direction.MaxSpeed+150</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="187162509859358" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="256912392083385" type="player2">
+                            <param id="0" name="Max Speed">Self.8Direction.MaxSpeed-150</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

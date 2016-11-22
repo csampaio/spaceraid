@@ -576,6 +576,22 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Laser" sid="582708796901402">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="886344455495615">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="890830527454291" speed="4">
+                    <frame duration="1" hotspotX="0.55" hotspotY="0.521739" original-source="E:\projetos\PosUEA\spaceraid\Assets\laser.gif" />
+                    <frame duration="1" hotspotX="0.5625" hotspotY="0.521739" />
+                    <frame duration="1" hotspotX="0.588235" hotspotY="0.521739" />
+                    <frame duration="1" hotspotX="0.565217" hotspotY="0.521739" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
