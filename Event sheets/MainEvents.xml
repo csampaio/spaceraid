@@ -24,6 +24,11 @@
                         <condition id="2" name="Key is down" sid="669924435437784" type="Keyboard">
                             <param id="0" name="Key">87 (W)</param>
                         </condition>
+                        <condition id="-8" name="Compare two values" sid="458289409869954" type="System">
+                            <param id="0" name="First value">Fuel1.Value</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="8Direction" id="7" name="Simulate control" sid="898253473205702" type="player1">
@@ -80,6 +85,11 @@
                     <conditions>
                         <condition id="2" name="Key is down" sid="301151439684987" type="Keyboard">
                             <param id="0" name="Key">38 (Up arrow)</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="105717499379020" type="System">
+                            <param id="0" name="First value">Fuel2.Value</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -693,6 +703,82 @@
                         </action>
                         <action behavior="8Direction" id="4" name="Set max speed" sid="256912392083385" type="player2">
                             <param id="0" name="Max Speed">Self.8Direction.MaxSpeed-150</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="742212759117993" title="Consumo de Combustível">
+            <sub-events>
+                <event-block sid="525487213883447">
+                    <conditions>
+                        <condition behavior="8Direction" id="1" name="Compare speed" sid="264034786092632" type="player1">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Speed">0</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="968560493009817" type="player1">
+                            <param id="0" name="Object">fuel</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="992427511434008" type="System">
+                            <param id="0" name="Interval (seconds)">0.7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set value" sid="100784985400799" type="Fuel1">
+                            <param id="0" name="Value">Self.Value-3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="237764999510643">
+                    <conditions>
+                        <condition behavior="8Direction" id="1" name="Compare speed" sid="137228012955203" type="player2">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Speed">0</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="187601817625349" type="player2">
+                            <param id="0" name="Object">fuel</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="714788683547561" type="System">
+                            <param id="0" name="Interval (seconds)">0.7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set value" sid="777766645354794" type="Fuel2">
+                            <param id="0" name="Value">Self.Value-3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="387462205708676" title="Abastecimento">
+            <sub-events>
+                <event-block sid="266442120897794">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="101480767081301" type="player1">
+                            <param id="0" name="Object">fuel</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="936702235400839" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set value" sid="102450385713890" type="Fuel1">
+                            <param id="0" name="Value">Self.Value+5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="932051853747665">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="157352334305806" type="player2">
+                            <param id="0" name="Object">fuel</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="263523227254572" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set value" sid="726875622184897" type="Fuel2">
+                            <param id="0" name="Value">Self.Value+5</param>
                         </action>
                     </actions>
                 </event-block>
