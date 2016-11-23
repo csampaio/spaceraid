@@ -664,6 +664,17 @@
                         <action id="-9" name="Destroy" sid="758407194338056" type="Laser" />
                     </actions>
                 </event-block>
+                <event-block sid="207005490990712">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="774427923369577" type="Laser">
+                            <param id="0" name="Object">fuel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="668862198487641" type="fuel" />
+                        <action id="-9" name="Destroy" sid="198721150010081" type="Laser" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="405572551962587" title="Boost">

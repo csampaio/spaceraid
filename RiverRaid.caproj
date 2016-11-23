@@ -609,7 +609,7 @@
         <event-sheet>MainEvents.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="30" />
+        <global-instance type="Keyboard" uid="56" />
     </global-instances>
     <sounds-folder />
     <music-folder />
