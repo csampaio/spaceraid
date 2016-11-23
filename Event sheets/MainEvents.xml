@@ -339,11 +339,6 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="819465761094489" type="player1" />
-                        <action id="0" name="Spawn another object" sid="667662945846481" type="player1">
-                            <param id="0" name="Object">Explosion</param>
-                            <param id="1" name="Layer">2</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="347798072821866">
@@ -355,11 +350,6 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="132143108227556" type="player1" />
                         <action id="-9" name="Destroy" sid="451970389165340" type="Enemy1" />
-                        <action id="0" name="Spawn another object" sid="538706049940140" type="player1">
-                            <param id="0" name="Object">Explosion</param>
-                            <param id="1" name="Layer">2</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="768579390510095">
@@ -371,11 +361,6 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="704822226959494" type="player1" />
                         <action id="-9" name="Destroy" sid="559477296137519" type="Enemy2" />
-                        <action id="0" name="Spawn another object" sid="607242884460474" type="player1">
-                            <param id="0" name="Object">Explosion</param>
-                            <param id="1" name="Layer">2</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="983602779805022">
@@ -387,11 +372,6 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="129643021712954" type="player1" />
                         <action id="-9" name="Destroy" sid="524507999412726" type="Enemy3" />
-                        <action id="0" name="Spawn another object" sid="362945128153141" type="player1">
-                            <param id="0" name="Object">Explosion</param>
-                            <param id="1" name="Layer">2</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="961075322868887">
@@ -403,11 +383,6 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="813412604363840" type="player1" />
                         <action id="-9" name="Destroy" sid="896829641113439" type="Enemy4" />
-                        <action id="0" name="Spawn another object" sid="545739404013803" type="player1">
-                            <param id="0" name="Object">Explosion</param>
-                            <param id="1" name="Layer">2</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="889728367534248">
@@ -419,11 +394,6 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="847553208096498" type="player1" />
                         <action id="-9" name="Destroy" sid="594865084917756" type="Enemy5" />
-                        <action id="0" name="Spawn another object" sid="756003208687487" type="player1">
-                            <param id="0" name="Object">Explosion</param>
-                            <param id="1" name="Layer">2</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="314213845289376">
@@ -434,11 +404,6 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="143287584201433" type="player2" />
-                        <action id="0" name="Spawn another object" sid="887932343621354" type="player2">
-                            <param id="0" name="Object">Explosion</param>
-                            <param id="1" name="Layer">2</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="930903578555072">
@@ -450,11 +415,6 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="278903722992410" type="player2" />
                         <action id="-9" name="Destroy" sid="910852035256179" type="Enemy1" />
-                        <action id="0" name="Spawn another object" sid="297804407160811" type="player2">
-                            <param id="0" name="Object">Explosion</param>
-                            <param id="1" name="Layer">2</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="888557998158458">
@@ -466,11 +426,6 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="140256887747791" type="player2" />
                         <action id="-9" name="Destroy" sid="386293716399451" type="Enemy2" />
-                        <action id="0" name="Spawn another object" sid="475294012408844" type="player2">
-                            <param id="0" name="Object">Explosion</param>
-                            <param id="1" name="Layer">2</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="652841268091013">
@@ -482,11 +437,6 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="934088837739421" type="player2" />
                         <action id="-9" name="Destroy" sid="349720297140356" type="Enemy3" />
-                        <action id="0" name="Spawn another object" sid="593075546874700" type="player2">
-                            <param id="0" name="Object">Explosion</param>
-                            <param id="1" name="Layer">2</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="433124582398436">
@@ -498,11 +448,6 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="993833757753530" type="player2" />
                         <action id="-9" name="Destroy" sid="668768869963649" type="Enemy4" />
-                        <action id="0" name="Spawn another object" sid="818603886070923" type="player2">
-                            <param id="0" name="Object">Explosion</param>
-                            <param id="1" name="Layer">2</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="702154873027492">
@@ -514,17 +459,32 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="307049339221468" type="player2" />
                         <action id="-9" name="Destroy" sid="254682273689701" type="Enemy5" />
-                        <action id="0" name="Spawn another object" sid="475646656695618" type="player2">
-                            <param id="0" name="Object">Explosion</param>
-                            <param id="1" name="Layer">2</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="356244399981443" title="Win Rules">
             <sub-events>
+                <event-block sid="864719635934720">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="942018991306615" type="player1">
+                            <param id="0" name="Object">DeadZone</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="348680795322533" type="player1" />
+                    </actions>
+                </event-block>
+                <event-block sid="272423401058356">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="383754084871848" type="player2">
+                            <param id="0" name="Object">DeadZone</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="932175658729606" type="player2" />
+                    </actions>
+                </event-block>
                 <event-block sid="394577924618665">
                     <conditions>
                         <condition id="1" name="Is overlapping another object" sid="452415881247145" type="player1">
@@ -572,6 +532,11 @@
                         <condition id="-19" name="On destroyed" sid="499588209037618" type="player1" />
                     </conditions>
                     <actions>
+                        <action id="0" name="Spawn another object" sid="417033960121429" type="player1">
+                            <param id="0" name="Object">Explosion</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
                         <action id="0" name="Set text" sid="465233384430202" type="WinnerText">
                             <param id="0" name="Text">&quot;Player 2 GANHOU!&quot;</param>
                         </action>
@@ -591,6 +556,11 @@
                         <condition id="-19" name="On destroyed" sid="707598890106975" type="player2" />
                     </conditions>
                     <actions>
+                        <action id="0" name="Spawn another object" sid="967996671978244" type="player2">
+                            <param id="0" name="Object">Explosion</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
                         <action id="0" name="Set text" sid="957284817588645" type="WinnerText">
                             <param id="0" name="Text">&quot;Player 1 GANHOU!&quot;</param>
                         </action>
@@ -790,6 +760,42 @@
                     <actions>
                         <action id="3" name="Set value" sid="726875622184897" type="Fuel2">
                             <param id="0" name="Value">Self.Value+5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="156259795800093" title="Camera">
+            <sub-events>
+                <event-block sid="735113327709745">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="858611117205043" type="player1">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">player2.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="225490227721591" type="player2">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="481902489360951" type="player1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="601869743107966">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="657188270614147" type="player2">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">player1.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="335159861025422" type="player1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="950971427810612" type="player2">
+                            <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>

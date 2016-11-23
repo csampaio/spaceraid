@@ -9,7 +9,7 @@
     </size>
     <margins>
         <horizontal>500</horizontal>
-        <vertical>5000</vertical>
+        <vertical>500</vertical>
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
@@ -57,11 +57,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>238</x>
-                        <y>7507</y>
+                        <x>238.839111328</x>
+                        <y>7503.637207031</y>
                         <z>0</z>
-                        <width>480</width>
-                        <height>5000</height>
+                        <width>481.678222656</width>
+                        <height>4993.274414063</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -195,11 +195,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>238</x>
-                        <y>2533</y>
+                        <x>241.356109619</x>
+                        <y>2516.638671875</y>
                         <z>0</z>
-                        <width>480</width>
-                        <height>5000</height>
+                        <width>478.321777344</width>
+                        <height>5032.723144531</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -317,8 +317,8 @@
                         <width>177</width>
                         <height>195</height>
                         <depth>0</depth>
-                        <hotspotX>0.502824843</hotspotX>
-                        <hotspotY>0.502564132</hotspotY>
+                        <hotspotX>5.511627674</hotspotX>
+                        <hotspotY>1.015388846</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -333,11 +333,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>240.5</x>
-                        <y>119</y>
+                        <x>241.339111328</x>
+                        <y>120.258506775</y>
                         <z>0</z>
-                        <width>401</width>
-                        <height>240</height>
+                        <width>481.548950195</width>
+                        <height>242.51701355</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -582,7 +582,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Launcher1" uid="38">
+                <instance type="Launcher1" uid="4">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -604,7 +604,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Launcher1" uid="39">
+                <instance type="Launcher1" uid="10">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -753,7 +753,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Enemy2" uid="37">
+                <instance type="Enemy2" uid="11">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -994,7 +994,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="fuel" uid="36">
+                <instance type="fuel" uid="12">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1016,7 +1016,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="fuel" uid="40">
+                <instance type="fuel" uid="13">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1038,7 +1038,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="boost" uid="41">
+                <instance type="boost" uid="14">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1079,7 +1079,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="PlayerName" uid="4">
+                <instance type="PlayerName" uid="15">
                     <properties>
                         <text>Player 1</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1106,7 +1106,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Fuel1" uid="10">
+                <instance type="Fuel1" uid="16">
                     <properties>
                         <value>100</value>
                         <minimum>0</minimum>
@@ -1130,7 +1130,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="Score1" uid="11">
+                <instance type="Score1" uid="17">
                     <properties>
                         <text>Score: 0</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1157,7 +1157,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FuelText" uid="12">
+                <instance type="FuelText" uid="18">
                     <properties>
                         <text>F</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1184,7 +1184,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FuelText" uid="13">
+                <instance type="FuelText" uid="19">
                     <properties>
                         <text>E</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1211,7 +1211,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PlayerName" uid="14">
+                <instance type="PlayerName" uid="20">
                     <properties>
                         <text>Player 2</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1238,7 +1238,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FuelText" uid="15">
+                <instance type="FuelText" uid="21">
                     <properties>
                         <text>F</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1265,7 +1265,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FuelText" uid="16">
+                <instance type="FuelText" uid="22">
                     <properties>
                         <text>E</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1292,7 +1292,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Score2" uid="17">
+                <instance type="Score2" uid="23">
                     <properties>
                         <text>Score: 0</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1319,7 +1319,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Fuel2" uid="18">
+                <instance type="Fuel2" uid="24">
                     <properties>
                         <value>100</value>
                         <minimum>0</minimum>
@@ -1343,7 +1343,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="PlayerName" uid="19">
+                <instance type="PlayerName" uid="25">
                     <properties>
                         <text>Player 1</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1370,7 +1370,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FuelText" uid="20">
+                <instance type="FuelText" uid="26">
                     <properties>
                         <text>E</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1397,7 +1397,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Fuel1" uid="21">
+                <instance type="Fuel1" uid="27">
                     <properties>
                         <value>100</value>
                         <minimum>0</minimum>
@@ -1421,7 +1421,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="Score1" uid="22">
+                <instance type="Score1" uid="28">
                     <properties>
                         <text>Score: 0</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1448,7 +1448,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FuelText" uid="23">
+                <instance type="FuelText" uid="29">
                     <properties>
                         <text>F</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1475,7 +1475,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PlayerName" uid="24">
+                <instance type="PlayerName" uid="30">
                     <properties>
                         <text>Player 2</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1502,7 +1502,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FuelText" uid="25">
+                <instance type="FuelText" uid="51">
                     <properties>
                         <text>E</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1529,7 +1529,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FuelText" uid="26">
+                <instance type="FuelText" uid="52">
                     <properties>
                         <text>F</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1556,7 +1556,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Fuel2" uid="27">
+                <instance type="Fuel2" uid="53">
                     <properties>
                         <value>100</value>
                         <minimum>0</minimum>
@@ -1580,7 +1580,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="Score2" uid="28">
+                <instance type="Score2" uid="54">
                     <properties>
                         <text>Score: 0</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1607,7 +1607,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="WinnerText" uid="29">
+                <instance type="WinnerText" uid="55">
                     <properties>
                         <text>Player 1 Campeão!</text>
                         <initial-visibility>Invisible</initial-visibility>
@@ -1630,6 +1630,28 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="DeadZone" uid="57">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>240</x>
+                        <y>739</y>
+                        <z>0</z>
+                        <width>500</width>
+                        <height>100</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

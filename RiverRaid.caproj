@@ -6,7 +6,7 @@
     <author></author>
     <author-email></author-email>
     <author-website>http://</author-website>
-    <app-id>com.mycompany.myapp</app-id>
+    <app-id>posgames2016.spaceraid</app-id>
     <unique-id>qn7hprmcxq99</unique-id>
     <saved-with-version>23900</saved-with-version>
     <used-plugins>
@@ -32,6 +32,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>MainLayout</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -40,7 +41,7 @@
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Construct 2 splash</prop>
-        <prop name="Orientations">Any</prop>
+        <prop name="Orientations">Portrait</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
@@ -596,6 +597,14 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="721726042263756" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DeadZone" sid="615810282615232">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="120556303225992" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
