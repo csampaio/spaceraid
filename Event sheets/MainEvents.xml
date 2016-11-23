@@ -801,5 +801,65 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="334263675337636">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="277673837527714" type="Enemy1" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="781572651222148" type="Enemy1">
+                    <param id="0" name="Object">Explosion2</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="602369722064147">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="819290379529273" type="Enemy2" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="443495727259936" type="Enemy2">
+                    <param id="0" name="Object">Explosion2</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="724744032651262">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="907961756862881" type="Enemy3" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="359800774278824" type="Enemy3">
+                    <param id="0" name="Object">Explosion2</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="502935618086722">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="563595870303262" type="Enemy4" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="945253542796744" type="Enemy4">
+                    <param id="0" name="Object">Explosion2</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="811318505009326">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="482318662540946" type="Enemy5" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="925432347668105" type="Enemy5">
+                    <param id="0" name="Object">Explosion2</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

@@ -129,16 +129,16 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="631183821036950" speed="5">
-                    <frame duration="1" hotspotX="0.489286" hotspotY="0.502825" original-source="G:\Pós Games\spaceraid\Files\nave - space raid.png">
+                    <frame duration="1" hotspotX="0.605357" hotspotY="0.461394" original-source="E:\projetos\PosUEA\spaceraid\Assets\nave2.png">
                         <collision-poly>
-                            <point x="0.710714" y="0.305085" />
-                            <point x="0.982143" y="0.499058" />
-                            <point x="0.710714" y="0.694915" />
-                            <point x="0.5" y="0.990584" />
-                            <point x="0.319643" y="0.6629" />
-                            <point x="0.0589285" y="0.499058" />
-                            <point x="0.319643" y="0.3371" />
-                            <point x="0.5" y="0.0112994" />
+                            <point x="0.986622" y="1" />
+                            <point x="0.612531" y="1" />
+                            <point x="0.234807" y="1" />
+                            <point x="0" y="0.500942" />
+                            <point x="0.29655" y="0" />
+                            <point x="0.612531" y="0" />
+                            <point x="0.924879" y="0" />
+                            <point x="1" y="0.500942" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -606,6 +606,21 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="120556303225992" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Explosion2" sid="715635103052961">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="734631037293971" speed="12">
+                    <frame duration="1" hotspotX="0.508621" hotspotY="0.513043" />
+                    <frame duration="1" hotspotX="0.508621" hotspotY="0.513043" />
+                    <frame duration="1" hotspotX="0.508621" hotspotY="0.513043" />
+                    <frame duration="1" hotspotX="0.508621" hotspotY="0.513043" />
+                    <frame duration="1" hotspotX="0.508621" hotspotY="0.513043" />
+                    <frame duration="1" hotspotX="0.508621" hotspotY="0.513043" />
+                    <frame duration="1" hotspotX="0.508621" hotspotY="0.513043" />
+                    <frame duration="1" hotspotX="0.508621" hotspotY="0.513043" />
                 </animation>
             </animation-folder>
         </object-type>

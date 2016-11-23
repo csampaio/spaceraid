@@ -466,8 +466,8 @@
                         <width>59.968605042</width>
                         <height>56.8630867</height>
                         <depth>0</depth>
-                        <hotspotX>0.489285707</hotspotX>
-                        <hotspotY>0.502824843</hotspotY>
+                        <hotspotX>0.60535717</hotspotX>
+                        <hotspotY>0.461393595</hotspotY>
                         <angle>-1.57079649</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1056,6 +1056,28 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Explosion2" uid="58">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>669.410766602</x>
+                        <y>4803.50390625</y>
+                        <z>0</z>
+                        <width>116</width>
+                        <height>115</height>
+                        <depth>0</depth>
+                        <hotspotX>0.508620679</hotspotX>
+                        <hotspotY>0.513043463</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1652,6 +1674,28 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Explosion2" uid="59">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>668</x>
+                        <y>4678</y>
+                        <z>0</z>
+                        <width>50</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.508620679</hotspotX>
+                        <hotspotY>0.513043463</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
