@@ -3,20 +3,119 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>MainEvents</name>
     <events>
+        <variable constant="0" name="FirstGame" sid="372150035745870" static="0" type="text">true</variable>
         <variable constant="0" name="maxSpeed" sid="247631701283677" static="0" type="number">300</variable>
-        <event-block sid="771379240099245">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="658288997799485" type="System" />
-            </conditions>
-            <actions>
-                <action behavior="8Direction" id="4" name="Set max speed" sid="121515076884490" type="player1">
-                    <param id="0" name="Max Speed">maxSpeed</param>
-                </action>
-                <action behavior="8Direction" id="4" name="Set max speed" sid="690634968632260" type="player2">
-                    <param id="0" name="Max Speed">maxSpeed</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="820025336302713" title="Init Game">
+            <sub-events>
+                <event-block sid="588686917795573">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="111012140211875" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="150786155565514" type="Player1">
+                            <param id="0" name="Instance variable">Distance</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="339642095108354" type="Player2">
+                            <param id="0" name="Instance variable">Distance</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="165106859180892" type="Player1">
+                            <param id="0" name="Instance variable">Distance</param>
+                            <param id="1" name="Value">ceil(Self.Y - WinnerFlag.Y)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="623494951993266" type="Player2">
+                            <param id="0" name="Instance variable">Distance</param>
+                            <param id="1" name="Value">ceil(Self.Y - WinnerFlag.Y)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="614609494662733" type="Score1">
+                            <param id="0" name="Text">&quot;Distância &quot; &amp; player1.Distance &amp; &quot;m&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="750508403599358" type="Score2">
+                            <param id="0" name="Text">&quot;Distância &quot; &amp; player2.Distance &amp; &quot;m&quot; </param>
+                        </action>
+                        <action id="3" name="Set value" sid="582787116548495" type="Fuel1">
+                            <param id="0" name="Value">player1.Fuel</param>
+                        </action>
+                        <action id="3" name="Set value" sid="243098562758977" type="Fuel2">
+                            <param id="0" name="Value">player2.Fuel</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="771379240099245">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="658288997799485" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="121515076884490" type="Player1">
+                            <param id="0" name="Max Speed">maxSpeed</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="690634968632260" type="Player2">
+                            <param id="0" name="Max Speed">maxSpeed</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="405792463961875">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="411601497034518" type="System">
+                            <param id="0" name="Variable">FirstGame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;true&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="449576418637074" type="PlayButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="440756274243245" type="PlayText">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="926165365762851" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="874337624023656">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="547232695482940" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">PlayButton</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="605086739618695" type="System">
+                            <param id="0" name="Time scale">1.0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="352338399359168" type="PlayButton">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="537418752703062" type="PlayText">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="537377478806524" type="System">
+                            <param id="0" name="Variable">FirstGame</param>
+                            <param id="1" name="Value">&quot;false&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="363004795514181">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="160353904263190" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">PlayButton</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="253621025047441" type="WinnerText" />
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="334370207677859" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="273001004595529" title="Player 1 Controls">
             <sub-events>
                 <event-block sid="679774110710486">
@@ -31,7 +130,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="898253473205702" type="player1">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="898253473205702" type="Player1">
                             <param id="0" name="Control">2</param>
                         </action>
                     </actions>
@@ -43,7 +142,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="897768123125846" type="player1">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="897768123125846" type="Player1">
                             <param id="0" name="Control">0</param>
                         </action>
                     </actions>
@@ -55,7 +154,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="861858337249221" type="player1">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="861858337249221" type="Player1">
                             <param id="0" name="Control">1</param>
                         </action>
                     </actions>
@@ -67,10 +166,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="3" name="Set speed" sid="339463949938711" type="player1">
+                        <action behavior="8Direction" id="3" name="Set speed" sid="339463949938711" type="Player1">
                             <param id="0" name="Speed">player1.8Direction.Speed-100</param>
                         </action>
-                        <action id="0" name="Spawn another object" sid="360383151875631" type="player1">
+                        <action id="0" name="Spawn another object" sid="360383151875631" type="Player1">
                             <param id="0" name="Object">Laser</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
@@ -93,7 +192,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="305346598415392" type="player2">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="305346598415392" type="Player2">
                             <param id="0" name="Control">2</param>
                         </action>
                     </actions>
@@ -105,7 +204,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="379499825871628" type="player2">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="379499825871628" type="Player2">
                             <param id="0" name="Control">0</param>
                         </action>
                     </actions>
@@ -117,7 +216,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="958997511122002" type="player2">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="958997511122002" type="Player2">
                             <param id="0" name="Control">1</param>
                         </action>
                     </actions>
@@ -129,10 +228,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="3" name="Set speed" sid="260333359968398" type="player2">
+                        <action behavior="8Direction" id="3" name="Set speed" sid="260333359968398" type="Player2">
                             <param id="0" name="Speed">player2.8Direction.Speed-100</param>
                         </action>
-                        <action id="0" name="Spawn another object" sid="739826169347309" type="player2">
+                        <action id="0" name="Spawn another object" sid="739826169347309" type="Player2">
                             <param id="0" name="Object">Laser</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
@@ -327,137 +426,228 @@
                         <action id="-9" name="Destroy" sid="802636448279351" type="Enemy5" />
                     </actions>
                 </event-block>
+                <event-block sid="334263675337636">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="277673837527714" type="Enemy1" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="781572651222148" type="Enemy1">
+                            <param id="0" name="Object">Explosion2</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="602369722064147">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="819290379529273" type="Enemy2" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="443495727259936" type="Enemy2">
+                            <param id="0" name="Object">Explosion2</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="724744032651262">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="907961756862881" type="Enemy3" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="359800774278824" type="Enemy3">
+                            <param id="0" name="Object">Explosion2</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="502935618086722">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="563595870303262" type="Enemy4" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="945253542796744" type="Enemy4">
+                            <param id="0" name="Object">Explosion2</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="811318505009326">
+                    <conditions>
+                        <condition id="-19" name="On destroyed" sid="482318662540946" type="Enemy5" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="925432347668105" type="Enemy5">
+                            <param id="0" name="Object">Explosion2</param>
+                            <param id="1" name="Layer">2</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="121709805793478">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="193288163508973" type="Explosion">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="717720158914850" type="Explosion" />
+                    </actions>
+                </event-block>
+                <event-block sid="340999353575108">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="211515402696746" type="Explosion2">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="441205460977248" type="Explosion2" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="659322532211313" title="Enemy Collision">
             <sub-events>
+                <event-block sid="731221716868867">
+                    <conditions>
+                        <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="861522835046062" type="Laser">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Distance">550</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="428016769983200" type="Laser" />
+                    </actions>
+                </event-block>
                 <event-block sid="417460205138628">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="595568697930073" type="player1">
+                        <condition id="0" name="On collision with another object" sid="595568697930073" type="Player1">
                             <param id="0" name="Object">Bridge</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="819465761094489" type="player1" />
+                        <action id="-9" name="Destroy" sid="819465761094489" type="Player1" />
                     </actions>
                 </event-block>
                 <event-block sid="347798072821866">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="815820806655565" type="player1">
+                        <condition id="0" name="On collision with another object" sid="815820806655565" type="Player1">
                             <param id="0" name="Object">Enemy1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="132143108227556" type="player1" />
+                        <action id="-9" name="Destroy" sid="132143108227556" type="Player1" />
                         <action id="-9" name="Destroy" sid="451970389165340" type="Enemy1" />
                     </actions>
                 </event-block>
                 <event-block sid="768579390510095">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="796029133358579" type="player1">
+                        <condition id="0" name="On collision with another object" sid="796029133358579" type="Player1">
                             <param id="0" name="Object">Enemy2</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="704822226959494" type="player1" />
+                        <action id="-9" name="Destroy" sid="704822226959494" type="Player1" />
                         <action id="-9" name="Destroy" sid="559477296137519" type="Enemy2" />
                     </actions>
                 </event-block>
                 <event-block sid="983602779805022">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="486793923207281" type="player1">
+                        <condition id="0" name="On collision with another object" sid="486793923207281" type="Player1">
                             <param id="0" name="Object">Enemy3</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="129643021712954" type="player1" />
+                        <action id="-9" name="Destroy" sid="129643021712954" type="Player1" />
                         <action id="-9" name="Destroy" sid="524507999412726" type="Enemy3" />
                     </actions>
                 </event-block>
                 <event-block sid="961075322868887">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="211838908601155" type="player1">
+                        <condition id="0" name="On collision with another object" sid="211838908601155" type="Player1">
                             <param id="0" name="Object">Enemy4</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="813412604363840" type="player1" />
+                        <action id="-9" name="Destroy" sid="813412604363840" type="Player1" />
                         <action id="-9" name="Destroy" sid="896829641113439" type="Enemy4" />
                     </actions>
                 </event-block>
                 <event-block sid="889728367534248">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="212542933959501" type="player1">
+                        <condition id="0" name="On collision with another object" sid="212542933959501" type="Player1">
                             <param id="0" name="Object">Enemy5</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="847553208096498" type="player1" />
+                        <action id="-9" name="Destroy" sid="847553208096498" type="Player1" />
                         <action id="-9" name="Destroy" sid="594865084917756" type="Enemy5" />
                     </actions>
                 </event-block>
                 <event-block sid="314213845289376">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="191567073055460" type="player2">
+                        <condition id="0" name="On collision with another object" sid="191567073055460" type="Player2">
                             <param id="0" name="Object">Bridge</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="143287584201433" type="player2" />
+                        <action id="-9" name="Destroy" sid="143287584201433" type="Player2" />
                     </actions>
                 </event-block>
                 <event-block sid="930903578555072">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="933350945434549" type="player2">
+                        <condition id="0" name="On collision with another object" sid="933350945434549" type="Player2">
                             <param id="0" name="Object">Enemy1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="278903722992410" type="player2" />
+                        <action id="-9" name="Destroy" sid="278903722992410" type="Player2" />
                         <action id="-9" name="Destroy" sid="910852035256179" type="Enemy1" />
                     </actions>
                 </event-block>
                 <event-block sid="888557998158458">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="895616725146647" type="player2">
+                        <condition id="0" name="On collision with another object" sid="895616725146647" type="Player2">
                             <param id="0" name="Object">Enemy2</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="140256887747791" type="player2" />
+                        <action id="-9" name="Destroy" sid="140256887747791" type="Player2" />
                         <action id="-9" name="Destroy" sid="386293716399451" type="Enemy2" />
                     </actions>
                 </event-block>
                 <event-block sid="652841268091013">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="185457202131152" type="player2">
+                        <condition id="0" name="On collision with another object" sid="185457202131152" type="Player2">
                             <param id="0" name="Object">Enemy3</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="934088837739421" type="player2" />
+                        <action id="-9" name="Destroy" sid="934088837739421" type="Player2" />
                         <action id="-9" name="Destroy" sid="349720297140356" type="Enemy3" />
                     </actions>
                 </event-block>
                 <event-block sid="433124582398436">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="128896405978350" type="player2">
+                        <condition id="0" name="On collision with another object" sid="128896405978350" type="Player2">
                             <param id="0" name="Object">Enemy4</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="993833757753530" type="player2" />
+                        <action id="-9" name="Destroy" sid="993833757753530" type="Player2" />
                         <action id="-9" name="Destroy" sid="668768869963649" type="Enemy4" />
                     </actions>
                 </event-block>
                 <event-block sid="702154873027492">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="964217286647745" type="player2">
+                        <condition id="0" name="On collision with another object" sid="964217286647745" type="Player2">
                             <param id="0" name="Object">Enemy5</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="307049339221468" type="player2" />
+                        <action id="-9" name="Destroy" sid="307049339221468" type="Player2" />
                         <action id="-9" name="Destroy" sid="254682273689701" type="Enemy5" />
                     </actions>
                 </event-block>
@@ -467,28 +657,32 @@
             <sub-events>
                 <event-block sid="864719635934720">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="942018991306615" type="player1">
+                        <condition id="1" name="Is overlapping another object" sid="942018991306615" type="Player1">
                             <param id="0" name="Object">DeadZone</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="348680795322533" type="player1" />
+                        <action id="-9" name="Destroy" sid="348680795322533" type="Player1" />
                     </actions>
                 </event-block>
                 <event-block sid="272423401058356">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="383754084871848" type="player2">
+                        <condition id="1" name="Is overlapping another object" sid="383754084871848" type="Player2">
                             <param id="0" name="Object">DeadZone</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="932175658729606" type="player2" />
+                        <action id="-9" name="Destroy" sid="932175658729606" type="Player2" />
                     </actions>
                 </event-block>
                 <event-block sid="394577924618665">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="452415881247145" type="player1">
+                        <condition id="1" name="Is overlapping another object" sid="452415881247145" type="Player1">
                             <param id="0" name="Object">WinnerFlag</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="724580958213851" type="Player1">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Y co-ordinate">Player2.Y</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -498,18 +692,28 @@
                         <action id="-15" name="Set visible" sid="232869134705078" type="WinnerText">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action behavior="8Direction" id="8" name="Set enabled" sid="515911842490002" type="player2">
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="515911842490002" type="Player2">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action behavior="8Direction" id="8" name="Set enabled" sid="363138264366566" type="player1">
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="363138264366566" type="Player1">
                             <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="842623116205442" type="PlayText">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="779786382856664" type="PlayButton">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="165811639802451">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="431386550489617" type="player2">
+                        <condition id="1" name="Is overlapping another object" sid="431386550489617" type="Player2">
                             <param id="0" name="Object">WinnerFlag</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="246881506000793" type="Player2">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">Player1.Y</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -519,20 +723,50 @@
                         <action id="-15" name="Set visible" sid="371497220819044" type="WinnerText">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action behavior="8Direction" id="8" name="Set enabled" sid="595203565007983" type="player1">
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="595203565007983" type="Player1">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action behavior="8Direction" id="8" name="Set enabled" sid="447711987881118" type="player2">
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="447711987881118" type="Player2">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="256579279250367" type="PlayText">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="306276993735787" type="PlayButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="594640981403485">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="695867717305185" type="Player1">
+                            <param id="0" name="Instance variable">Fuel</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="599719928601861" type="Player1" />
+                    </actions>
+                </event-block>
+                <event-block sid="834991987694996">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="809093982516079" type="Player2">
+                            <param id="0" name="Instance variable">Fuel</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="289537411793064" type="Player2" />
                     </actions>
                 </event-block>
                 <event-block sid="424892841490240">
                     <conditions>
-                        <condition id="-19" name="On destroyed" sid="499588209037618" type="player1" />
+                        <condition id="-19" name="On destroyed" sid="499588209037618" type="Player1" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="417033960121429" type="player1">
+                        <action id="0" name="Spawn another object" sid="417033960121429" type="Player1">
                             <param id="0" name="Object">Explosion</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
@@ -543,20 +777,29 @@
                         <action id="-15" name="Set visible" sid="727978228902009" type="WinnerText">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action behavior="8Direction" id="8" name="Set enabled" sid="178268329724968" type="player2">
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="178268329724968" type="Player2">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action id="11" name="Set collisions enabled" sid="273762095634076" type="player2">
+                        <action id="11" name="Set collisions enabled" sid="273762095634076" type="Player2">
                             <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="525202713636305" type="Player2">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="476446633584122" type="PlayButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="516584318741519" type="PlayText">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="750020551642449">
                     <conditions>
-                        <condition id="-19" name="On destroyed" sid="707598890106975" type="player2" />
+                        <condition id="-19" name="On destroyed" sid="707598890106975" type="Player2" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="967996671978244" type="player2">
+                        <action id="0" name="Spawn another object" sid="967996671978244" type="Player2">
                             <param id="0" name="Object">Explosion</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
@@ -567,12 +810,81 @@
                         <action id="-15" name="Set visible" sid="862021126783660" type="WinnerText">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action behavior="8Direction" id="8" name="Set enabled" sid="254599473945832" type="player1">
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="254599473945832" type="Player1">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action id="11" name="Set collisions enabled" sid="680498389293583" type="player1">
+                        <action id="11" name="Set collisions enabled" sid="680498389293583" type="Player1">
                             <param id="0" name="Collisions">0</param>
                         </action>
+                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="511671912293745" type="Player1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="562688882568347" type="PlayButton">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="404637134083269" type="PlayText">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="638938174890454">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="133402586018800" type="Player1">
+                            <param id="0" name="Object">Terrain</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="519299025016300" type="Player1" />
+                    </actions>
+                </event-block>
+                <event-block sid="195212798486720">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="338313476825934" type="Player2">
+                            <param id="0" name="Object">Terrain</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="576167811086242" type="Player2" />
+                    </actions>
+                </event-block>
+                <event-block sid="974977435545563">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="617011676233538" type="Player1">
+                            <param id="0" name="Object">TerrainDir</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="272789045440382" type="Player1" />
+                    </actions>
+                </event-block>
+                <event-block sid="886607081180782">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="510673656050154" type="Player2">
+                            <param id="0" name="Object">TerrainDir</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="584957266755020" type="Player2" />
+                    </actions>
+                </event-block>
+                <event-block sid="311381092210659">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="765972204870407" type="Player1">
+                            <param id="0" name="Object">TerrainEsq</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="628142883241378" type="Player1" />
+                    </actions>
+                </event-block>
+                <event-block sid="790265721848476">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="642674704770952" type="Player2">
+                            <param id="0" name="Object">TerrainEsq</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="973558598716710" type="Player2" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -651,38 +963,38 @@
             <sub-events>
                 <event-block sid="776907293983968">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="415278214073022" type="player1">
+                        <condition id="0" name="On collision with another object" sid="415278214073022" type="Player1">
                             <param id="0" name="Object">boost</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="604017842191431" type="boost" />
-                        <action behavior="8Direction" id="4" name="Set max speed" sid="869874307011663" type="player1">
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="869874307011663" type="Player1">
                             <param id="0" name="Max Speed">Self.8Direction.MaxSpeed+150</param>
                         </action>
                         <action id="-16" name="Wait" sid="501518073654510" type="System">
                             <param id="0" name="Seconds">1</param>
                         </action>
-                        <action behavior="8Direction" id="4" name="Set max speed" sid="775388660708481" type="player1">
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="775388660708481" type="Player1">
                             <param id="0" name="Max Speed">Self.8Direction.MaxSpeed-150</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="319784740094716">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="521072962124290" type="player2">
+                        <condition id="0" name="On collision with another object" sid="521072962124290" type="Player2">
                             <param id="0" name="Object">boost</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="978278636697454" type="boost" />
-                        <action behavior="8Direction" id="4" name="Set max speed" sid="415850714547935" type="player2">
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="415850714547935" type="Player2">
                             <param id="0" name="Max Speed">Self.8Direction.MaxSpeed+150</param>
                         </action>
                         <action id="-16" name="Wait" sid="187162509859358" type="System">
                             <param id="0" name="Seconds">1</param>
                         </action>
-                        <action behavior="8Direction" id="4" name="Set max speed" sid="256912392083385" type="player2">
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="256912392083385" type="Player2">
                             <param id="0" name="Max Speed">Self.8Direction.MaxSpeed-150</param>
                         </action>
                     </actions>
@@ -693,39 +1005,45 @@
             <sub-events>
                 <event-block sid="525487213883447">
                     <conditions>
-                        <condition behavior="8Direction" id="1" name="Compare speed" sid="264034786092632" type="player1">
+                        <condition behavior="Bullet" id="0" name="Compare speed" sid="264034786092632" type="Player1">
                             <param id="0" name="Comparison">4</param>
                             <param id="1" name="Speed">0</param>
                         </condition>
-                        <condition id="1" inverted="1" name="Is overlapping another object" sid="968560493009817" type="player1">
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="968560493009817" type="Player1">
                             <param id="0" name="Object">fuel</param>
                         </condition>
                         <condition id="-6" name="Every X seconds" sid="992427511434008" type="System">
                             <param id="0" name="Interval (seconds)">0.7</param>
                         </condition>
+                        <condition id="-9" name="Is visible" sid="183571938346499" type="Player2" />
+                        <condition id="-9" inverted="1" name="Is visible" sid="153990255935262" type="WinnerText" />
                     </conditions>
                     <actions>
-                        <action id="3" name="Set value" sid="100784985400799" type="Fuel1">
-                            <param id="0" name="Value">Self.Value-3</param>
+                        <action id="-10" name="Set value" sid="100784985400799" type="Player1">
+                            <param id="0" name="Instance variable">Fuel</param>
+                            <param id="1" name="Value">Self.Fuel - 3</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="237764999510643">
                     <conditions>
-                        <condition behavior="8Direction" id="1" name="Compare speed" sid="137228012955203" type="player2">
+                        <condition behavior="Bullet" id="0" name="Compare speed" sid="137228012955203" type="Player2">
                             <param id="0" name="Comparison">4</param>
                             <param id="1" name="Speed">0</param>
                         </condition>
-                        <condition id="1" inverted="1" name="Is overlapping another object" sid="187601817625349" type="player2">
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="187601817625349" type="Player2">
                             <param id="0" name="Object">fuel</param>
                         </condition>
                         <condition id="-6" name="Every X seconds" sid="714788683547561" type="System">
                             <param id="0" name="Interval (seconds)">0.7</param>
                         </condition>
+                        <condition id="-9" name="Is visible" sid="883836535816133" type="Player1" />
+                        <condition id="-9" inverted="1" name="Is visible" sid="604968068144378" type="WinnerText" />
                     </conditions>
                     <actions>
-                        <action id="3" name="Set value" sid="777766645354794" type="Fuel2">
-                            <param id="0" name="Value">Self.Value-3</param>
+                        <action id="-10" name="Set value" sid="777766645354794" type="Player2">
+                            <param id="0" name="Instance variable">Fuel</param>
+                            <param id="1" name="Value">Self.Fuel - 3</param>
                         </action>
                     </actions>
                 </event-block>
@@ -735,7 +1053,7 @@
             <sub-events>
                 <event-block sid="266442120897794">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="101480767081301" type="player1">
+                        <condition id="1" name="Is overlapping another object" sid="101480767081301" type="Player1">
                             <param id="0" name="Object">fuel</param>
                         </condition>
                         <condition id="-6" name="Every X seconds" sid="936702235400839" type="System">
@@ -743,14 +1061,15 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="3" name="Set value" sid="102450385713890" type="Fuel1">
-                            <param id="0" name="Value">Self.Value+5</param>
+                        <action id="-10" name="Set value" sid="102450385713890" type="Player1">
+                            <param id="0" name="Instance variable">Fuel</param>
+                            <param id="1" name="Value">Self.Fuel + 5</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="932051853747665">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="157352334305806" type="player2">
+                        <condition id="1" name="Is overlapping another object" sid="157352334305806" type="Player2">
                             <param id="0" name="Object">fuel</param>
                         </condition>
                         <condition id="-6" name="Every X seconds" sid="263523227254572" type="System">
@@ -758,8 +1077,9 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="3" name="Set value" sid="726875622184897" type="Fuel2">
-                            <param id="0" name="Value">Self.Value+5</param>
+                        <action id="-10" name="Set value" sid="726875622184897" type="Player2">
+                            <param id="0" name="Instance variable">Fuel</param>
+                            <param id="1" name="Value">Self.Fuel + 5</param>
                         </action>
                     </actions>
                 </event-block>
@@ -769,97 +1089,37 @@
             <sub-events>
                 <event-block sid="735113327709745">
                     <conditions>
-                        <condition id="-2" name="Compare Y" sid="858611117205043" type="player1">
+                        <condition id="-2" name="Compare Y" sid="858611117205043" type="Player1">
                             <param id="0" name="Comparison">2</param>
                             <param id="1" name="Y co-ordinate">player2.Y</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="225490227721591" type="player2">
+                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="225490227721591" type="Player2">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="481902489360951" type="player1">
+                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="481902489360951" type="Player1">
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="601869743107966">
                     <conditions>
-                        <condition id="-2" name="Compare Y" sid="657188270614147" type="player2">
+                        <condition id="-2" name="Compare Y" sid="657188270614147" type="Player2">
                             <param id="0" name="Comparison">2</param>
                             <param id="1" name="Y co-ordinate">player1.Y</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="335159861025422" type="player1">
+                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="335159861025422" type="Player1">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="950971427810612" type="player2">
+                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="950971427810612" type="Player2">
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="334263675337636">
-            <conditions>
-                <condition id="-19" name="On destroyed" sid="277673837527714" type="Enemy1" />
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="781572651222148" type="Enemy1">
-                    <param id="0" name="Object">Explosion2</param>
-                    <param id="1" name="Layer">2</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="602369722064147">
-            <conditions>
-                <condition id="-19" name="On destroyed" sid="819290379529273" type="Enemy2" />
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="443495727259936" type="Enemy2">
-                    <param id="0" name="Object">Explosion2</param>
-                    <param id="1" name="Layer">2</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="724744032651262">
-            <conditions>
-                <condition id="-19" name="On destroyed" sid="907961756862881" type="Enemy3" />
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="359800774278824" type="Enemy3">
-                    <param id="0" name="Object">Explosion2</param>
-                    <param id="1" name="Layer">2</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="502935618086722">
-            <conditions>
-                <condition id="-19" name="On destroyed" sid="563595870303262" type="Enemy4" />
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="945253542796744" type="Enemy4">
-                    <param id="0" name="Object">Explosion2</param>
-                    <param id="1" name="Layer">2</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="811318505009326">
-            <conditions>
-                <condition id="-19" name="On destroyed" sid="482318662540946" type="Enemy5" />
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="925432347668105" type="Enemy5">
-                    <param id="0" name="Object">Explosion2</param>
-                    <param id="1" name="Layer">2</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>

@@ -10,7 +10,9 @@
     <unique-id>qn7hprmcxq99</unique-id>
     <saved-with-version>23900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="sliderbar" version="1">Slider bar</plugin>
@@ -70,16 +72,14 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="player1" sid="643015605162437">
+        <object-type name="Player1" sid="643015605162437">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Score" sid="558656017376806" type="number" />
                 <instance-variable name="Fuel" sid="606744685970409" type="number" />
+                <instance-variable comment="Distância para linha de chegada" name="Distance" sid="711587601600206" type="number" />
             </instance-variables>
             <behaviors>
-                <behavior-type name="BoundToLayout" sid="567103790923206">
-                    <behavior id="bound" />
-                </behavior-type>
                 <behavior-type name="Solid" sid="347822201958664">
                     <behavior id="solid" />
                 </behavior-type>
@@ -89,34 +89,38 @@
                 <behavior-type name="8Direction" sid="309381424894891">
                     <behavior id="EightDir" />
                 </behavior-type>
+                <behavior-type name="Bullet" sid="276806429536158">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="120802647480737">
+                    <behavior id="bound" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="319798763930259" speed="5">
                     <frame duration="1" hotspotX="0.489286" hotspotY="0.502825" original-source="G:\Pós Games\spaceraid\Files\nave - space raid.png">
                         <collision-poly>
-                            <point x="0.710714" y="0.305085" />
+                            <point x="0.4" y="0.0282487" />
+                            <point x="0.676786" y="0.00188324" />
+                            <point x="0.7875" y="0.175141" />
                             <point x="0.982143" y="0.499058" />
-                            <point x="0.710714" y="0.694915" />
-                            <point x="0.5" y="0.990584" />
-                            <point x="0.319643" y="0.6629" />
-                            <point x="0.0589285" y="0.499058" />
-                            <point x="0.319643" y="0.3371" />
-                            <point x="0.5" y="0.0112994" />
+                            <point x="0.789286" y="0.821092" />
+                            <point x="0.667857" y="0.992467" />
+                            <point x="0.389286" y="0.960452" />
+                            <point x="0.0589286" y="0.499058" />
                         </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="player2" sid="144965379793408">
+        <object-type name="Player2" sid="144965379793408">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Score" sid="798489350489468" type="number" />
                 <instance-variable name="Fuel" sid="934430484041837" type="number" />
+                <instance-variable comment="Distância para a linha de chegada" name="Distance" sid="729089258078201" type="number" />
             </instance-variables>
             <behaviors>
-                <behavior-type name="BoundToLayout" sid="349661985599235">
-                    <behavior id="bound" />
-                </behavior-type>
                 <behavior-type name="Solid" sid="964378715794542">
                     <behavior id="solid" />
                 </behavior-type>
@@ -126,19 +130,25 @@
                 <behavior-type name="8Direction" sid="827894743614430">
                     <behavior id="EightDir" />
                 </behavior-type>
+                <behavior-type name="Bullet" sid="681656784621993">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="426842165564687">
+                    <behavior id="bound" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="631183821036950" speed="5">
-                    <frame duration="1" hotspotX="0.605357" hotspotY="0.461394" original-source="E:\projetos\PosUEA\spaceraid\Assets\nave2.png">
+                    <frame duration="1" hotspotX="0.489286" hotspotY="0.502825" original-source="E:\projetos\PosUEA\spaceraid\Assets\nave2.png">
                         <collision-poly>
-                            <point x="0.986622" y="1" />
-                            <point x="0.612531" y="1" />
-                            <point x="0.234807" y="1" />
-                            <point x="0" y="0.500942" />
-                            <point x="0.29655" y="0" />
-                            <point x="0.612531" y="0" />
-                            <point x="0.924879" y="0" />
-                            <point x="1" y="0.500942" />
+                            <point x="0.800907" y="0.817326" />
+                            <point x="0.67146" y="0.986817" />
+                            <point x="0.400878" y="0.971751" />
+                            <point x="0.0571429" y="0.502825" />
+                            <point x="0.389407" y="0.0376648" />
+                            <point x="0.662531" y="0.0131827" />
+                            <point x="0.794521" y="0.173258" />
+                            <point x="0.989286" y="0.500942" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -573,7 +583,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="485609378784125" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\projetos\PosUEA\spaceraid\Assets\winflag.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\projetos\PosUEA\spaceraid\Assets\winflag.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -585,7 +595,7 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="890830527454291" speed="4">
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="890830527454291" speed="8">
                     <frame duration="1" hotspotX="0.55" hotspotY="0.521739" original-source="E:\projetos\PosUEA\spaceraid\Assets\laser.gif" />
                     <frame duration="1" hotspotX="0.5625" hotspotY="0.521739" />
                     <frame duration="1" hotspotX="0.588235" hotspotY="0.521739" />
@@ -612,7 +622,7 @@
         <object-type name="Explosion2" sid="715635103052961">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="734631037293971" speed="12">
+                <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="734631037293971" speed="12">
                     <frame duration="1" hotspotX="0.508621" hotspotY="0.513043" />
                     <frame duration="1" hotspotX="0.508621" hotspotY="0.513043" />
                     <frame duration="1" hotspotX="0.508621" hotspotY="0.513043" />
@@ -621,8 +631,69 @@
                     <frame duration="1" hotspotX="0.508621" hotspotY="0.513043" />
                     <frame duration="1" hotspotX="0.508621" hotspotY="0.513043" />
                     <frame duration="1" hotspotX="0.508621" hotspotY="0.513043" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504348" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="PlayButton" sid="652936249313260">
+            <plugin id="Sprite" />
+            <container>
+                <type>PlayButton</type>
+                <type>PlayText</type>
+            </container>
+            <animation-folder>
+                <animation framecount="3" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="536881641089175" speed="6">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\projetos\PosUEA\spaceraid\Assets\play_button.png">
+                        <collision-poly>
+                            <point x="0.190909" y="0.190909" />
+                            <point x="0.5" y="0.0666667" />
+                            <point x="0.80303" y="0.19697" />
+                            <point x="0.924242" y="0.5" />
+                            <point x="0.79697" y="0.79697" />
+                            <point x="0.5" y="0.924242" />
+                            <point x="0.19697" y="0.80303" />
+                            <point x="0.0666667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.506667" hotspotY="0.506667">
+                        <collision-poly>
+                            <point x="0.193252" y="0.193252" />
+                            <point x="0.506135" y="0.0674847" />
+                            <point x="0.812883" y="0.199387" />
+                            <point x="0.935583" y="0.506135" />
+                            <point x="0.806748" y="0.806748" />
+                            <point x="0.506135" y="0.935583" />
+                            <point x="0.199387" y="0.812883" />
+                            <point x="0.0674847" y="0.506135" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.190909" y="0.190909" />
+                            <point x="0.5" y="0.0666667" />
+                            <point x="0.80303" y="0.19697" />
+                            <point x="0.924242" y="0.5" />
+                            <point x="0.79697" y="0.79697" />
+                            <point x="0.5" y="0.924242" />
+                            <point x="0.19697" y="0.80303" />
+                            <point x="0.0666667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PlayText" sid="966101239327216">
+            <plugin id="Text" />
+            <container>
+                <type>PlayButton</type>
+                <type>PlayText</type>
+            </container>
+        </object-type>
+        <object-type name="Mouse" sid="676546679123976">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="RestartGame" sid="775529224129673">
+            <plugin id="Function" />
         </object-type>
     </object-folder>
     <families />
@@ -634,6 +705,8 @@
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="56" />
+        <global-instance type="Mouse" uid="62" />
+        <global-instance type="RestartGame" uid="63" />
     </global-instances>
     <sounds-folder />
     <music-folder />

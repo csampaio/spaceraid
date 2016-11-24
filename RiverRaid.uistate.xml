@@ -10,8 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">MainLayout</layout>
-        <event-sheet active="1" order="1">MainEvents</event-sheet>
+        <layout active="1" order="0">MainLayout</layout>
+        <event-sheet order="1">MainEvents</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -29,8 +29,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="music-folder/" />
         <folder expanded="1" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/Terrain/" />
-        <folder expanded="1" path="animation-folder/player1/" />
-        <folder expanded="1" path="animation-folder/player2/" />
+        <folder expanded="1" path="animation-folder/Player1/" />
+        <folder expanded="1" path="animation-folder/Player2/" />
         <folder expanded="1" path="animation-folder/boost/" />
         <folder expanded="1" path="animation-folder/WaterBg/" />
         <folder expanded="1" path="animation-folder/TerrainDir/" />
@@ -52,5 +52,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/fuel/" />
         <folder expanded="1" path="animation-folder/DeadZone/" />
         <folder expanded="1" path="animation-folder/Explosion2/" />
+        <folder expanded="1" path="animation-folder/PlayButton/" />
     </folders-expanded>
 </c2uistate>
