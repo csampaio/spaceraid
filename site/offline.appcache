@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1479961235
+#1480114657
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -18,6 +18,8 @@ images/launcher2-sheet0.png
 images/launcher3-sheet0.png
 images/launcher4-sheet0.png
 images/launcher5-sheet0.png
+images/enemy3-sheet0.png
+images/enemy4-sheet0.png
 images/explosion-sheet0.png
 images/explosion-sheet1.png
 images/explosion-sheet2.png
@@ -30,6 +32,22 @@ images/explosion2-sheet0.png
 images/explosion2-sheet1.png
 images/playbutton-sheet0.png
 images/playbutton-sheet1.png
+media/explosion%20bang%2004.m4a
+media/explosion%20bang%2004.ogg
+media/tech%20charger%20power%20up%2006.m4a
+media/tech%20charger%20power%20up%2006.ogg
+media/tech%20weapon%20gun%20shot%20phaser%20down%2002.m4a
+media/tech%20weapon%20gun%20shot%20phaser%20down%2002.ogg
+media/retro%20jump%20up%20bounce%20long%2003.m4a
+media/retro%20jump%20up%20bounce%20long%2003.ogg
+media/slider%20swipe%20drag%20movement%20stone%2008.m4a
+media/slider%20swipe%20drag%20movement%20stone%2008.ogg
+media/engine%20motor%20heavy%20loop%2008.m4a
+media/engine%20motor%20heavy%20loop%2008.ogg
+media/spaceship%20engine%20sound%20effect.m4a
+media/spaceship%20engine%20sound%20effect.ogg
+media/countrified.m4a
+media/countrified.ogg
 icon-16.png
 icon-32.png
 icon-114.png
