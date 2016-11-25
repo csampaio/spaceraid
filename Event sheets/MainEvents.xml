@@ -67,6 +67,12 @@
                             <param id="3" name="Volume">-15</param>
                             <param id="1" name="Tag (optional)">&quot;motor2&quot;</param>
                         </action>
+                        <action id="0" name="Play" sid="431808326747667" type="Audio">
+                            <param id="0" name="Audio file">Countrified</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;Music&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="405792463961875">
@@ -124,6 +130,9 @@
                     </conditions>
                     <actions>
                         <action id="-26" name="Restart layout" sid="334370207677859" type="System" />
+                        <action id="6" name="Stop" sid="749992762936921" type="Audio">
+                            <param id="0" name="Tag">&quot;Music&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -356,7 +365,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="650834596845584" type="Launcher4">
-                            <param id="0" name="Object">Enemy4</param>
+                            <param id="0" name="Object">Enemy1</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
@@ -370,7 +379,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="207729825075211" type="Launcher5">
-                            <param id="0" name="Object">Enemy5</param>
+                            <param id="0" name="Object">Enemy2</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>

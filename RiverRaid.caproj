@@ -162,7 +162,14 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="372882178196375" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.501873" hotspotY="0.501449" original-source="E:\projetos\PosUEA\spaceraid\Assets\poweup.png">
+                        <collision-poly>
+                            <point x="0.153558" y="0.147826" />
+                            <point x="0.865169" y="0.144928" />
+                            <point x="0.868914" y="0.869565" />
+                            <point x="0.153558" y="0.85797" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -281,41 +288,8 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="940988271993713" speed="0">
-                    <frame duration="1" hotspotX="0.505376" hotspotY="0.505747">
-                        <collision-poly>
-                            <point x="0.258065" y="0" />
-                            <point x="1" y="0.5" />
-                            <point x="0.252688" y="1" />
-                            <point x="0" y="0.494252" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849">
-                        <collision-poly>
-                            <point x="0.648936" y="0.452055" />
-                            <point x="0.989362" y="0.493151" />
-                            <point x="0.648936" y="0.547945" />
-                            <point x="0.37234" y="1" />
-                            <point x="0.0106383" y="0.493151" />
-                            <point x="0.393617" y="0" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.494624" hotspotY="0.492754">
-                        <collision-poly>
-                            <point x="0.989247" y="0.492754" />
-                            <point x="0.215054" y="1" />
-                            <point x="0.0215054" y="0.492754" />
-                            <point x="0.247312" y="0" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.462366" hotspotY="0.522388">
-                        <collision-poly>
-                            <point x="0.989247" y="0.492537" />
-                            <point x="0.27957" y="1" />
-                            <point x="0.0107527" y="0.492537" />
-                            <point x="0.290323" y="0" />
-                        </collision-poly>
-                    </frame>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="940988271993713" speed="0">
+                    <frame duration="1" hotspotX="0.892562" hotspotY="0.585106" original-source="E:\projetos\PosUEA\spaceraid\Assets\enemy_2.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -405,39 +379,17 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="336923308663043" speed="0">
-                    <frame duration="1" hotspotX="0.505376" hotspotY="0.505747">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="336923308663043" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.51087" original-source="E:\projetos\PosUEA\spaceraid\Assets\enemy_3_cheeseye.png">
                         <collision-poly>
-                            <point x="0.258065" y="0" />
-                            <point x="1" y="0.5" />
-                            <point x="0.252688" y="1" />
-                            <point x="0" y="0.494252" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849">
-                        <collision-poly>
-                            <point x="0.648936" y="0.452055" />
-                            <point x="0.989362" y="0.493151" />
-                            <point x="0.648936" y="0.547945" />
-                            <point x="0.37234" y="1" />
-                            <point x="0.0106383" y="0.493151" />
-                            <point x="0.393617" y="0" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.494624" hotspotY="0.492754">
-                        <collision-poly>
-                            <point x="0.989247" y="0.492754" />
-                            <point x="0.215054" y="1" />
-                            <point x="0.0215054" y="0.492754" />
-                            <point x="0.247312" y="0" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.462366" hotspotY="0.522388">
-                        <collision-poly>
-                            <point x="0.989247" y="0.492537" />
-                            <point x="0.27957" y="1" />
-                            <point x="0.0107527" y="0.492537" />
-                            <point x="0.290323" y="0" />
+                            <point x="0.119565" y="0.119565" />
+                            <point x="0.5" y="0.0978261" />
+                            <point x="0.858696" y="0.141304" />
+                            <point x="0.934783" y="0.5" />
+                            <point x="0.826087" y="0.826087" />
+                            <point x="0.5" y="0.956522" />
+                            <point x="0.173913" y="0.826087" />
+                            <point x="0.0543478" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -608,7 +560,14 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="721726042263756" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.507576" hotspotY="0.463333" original-source="E:\projetos\PosUEA\spaceraid\Assets\booster.png">
+                        <collision-poly>
+                            <point x="0.85606" y="0.0633334" />
+                            <point x="0.734848" y="0.883333" />
+                            <point x="0.257576" y="0.886667" />
+                            <point x="0.159091" y="0.0400002" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -741,6 +700,8 @@
         <file name="ENGINE Motor Heavy Loop 08.ogg" />
         <file name="Spaceship engine sound effect.m4a" />
         <file name="Spaceship engine sound effect.ogg" />
+        <file name="Countrified.m4a" />
+        <file name="Countrified.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
