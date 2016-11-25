@@ -1290,5 +1290,67 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="356054030509451">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="640575994922467" type="System">
+                    <param id="0" name="First value">Player1.Fuel</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">26</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="599172369159974" type="Audio">
+                    <param id="0" name="Audio file">ALARM Alert Ringer Ascend 01</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;fuelAlarmP1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="104826735104913">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="840130706118751" type="System">
+                    <param id="0" name="First value">Player1.Fuel</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">25</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="992393938377969" type="Audio">
+                    <param id="0" name="Tag">&quot;fuelAlarmP1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="656586185057546">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="937742604310149" type="System">
+                    <param id="0" name="First value">Player2.Fuel</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">26</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="783610411093370" type="Audio">
+                    <param id="0" name="Audio file">ALARM Alert Ringer Ascend 01</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;fuelAlarmP1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="159600824345612">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="722496473086499" type="System">
+                    <param id="0" name="First value">Player2.Fuel</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">25</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Stop" sid="717544419849376" type="Audio">
+                    <param id="0" name="Tag">&quot;fuelAlarmP1&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
