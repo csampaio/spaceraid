@@ -10,6 +10,7 @@
     <unique-id>qn7hprmcxq99</unique-id>
     <saved-with-version>23900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
@@ -695,6 +696,9 @@
         <object-type name="RestartGame" sid="775529224129673">
             <plugin id="Function" />
         </object-type>
+        <object-type name="Audio" sid="208046331591073">
+            <plugin id="Audio" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -707,8 +711,37 @@
         <global-instance type="Keyboard" uid="56" />
         <global-instance type="Mouse" uid="62" />
         <global-instance type="RestartGame" uid="63" />
+        <global-instance type="Audio" uid="65">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="EXPLOSION Bang 04.m4a" />
+        <file name="EXPLOSION Bang 04.ogg" />
+        <file name="TECH CHARGER Power Up 06.m4a" />
+        <file name="TECH CHARGER Power Up 06.ogg" />
+        <file name="TECH WEAPON Gun Shot Phaser Down 02.m4a" />
+        <file name="TECH WEAPON Gun Shot Phaser Down 02.ogg" />
+        <file name="RETRO Jump Up Bounce Long 03.m4a" />
+        <file name="RETRO Jump Up Bounce Long 03.ogg" />
+        <file name="SLIDER Swipe Drag Movement Stone 08.m4a" />
+        <file name="SLIDER Swipe Drag Movement Stone 08.ogg" />
+        <file name="ENGINE Motor Heavy Loop 08.m4a" />
+        <file name="ENGINE Motor Heavy Loop 08.ogg" />
+        <file name="Spaceship engine sound effect.m4a" />
+        <file name="Spaceship engine sound effect.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">

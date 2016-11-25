@@ -55,6 +55,18 @@
                         <action behavior="8Direction" id="4" name="Set max speed" sid="690634968632260" type="Player2">
                             <param id="0" name="Max Speed">maxSpeed</param>
                         </action>
+                        <action id="0" name="Play" sid="116650859410481" type="Audio">
+                            <param id="0" name="Audio file">Spaceship engine sound effect</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-15</param>
+                            <param id="1" name="Tag (optional)">&quot;motor1&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="560405068474363" type="Audio">
+                            <param id="0" name="Audio file">Spaceship engine sound effect</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-15</param>
+                            <param id="1" name="Tag (optional)">&quot;motor2&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="405792463961875">
@@ -133,6 +145,23 @@
                         <action behavior="8Direction" id="7" name="Simulate control" sid="898253473205702" type="Player1">
                             <param id="0" name="Control">2</param>
                         </action>
+                        <action id="3" name="Set volume" sid="972502814232388" type="Audio">
+                            <param id="0" name="Tag">&quot;motor1&quot;</param>
+                            <param id="1" name="dB">-3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="640498961658419">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="580118422265628" type="Keyboard">
+                            <param id="0" name="Key">87 (W)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="250256705225066" type="Audio">
+                            <param id="0" name="Tag">&quot;motor1&quot;</param>
+                            <param id="1" name="dB">-15</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="514716860338546">
@@ -174,6 +203,18 @@
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
                         </action>
+                        <action id="0" name="Play" sid="127047992815096" type="Audio">
+                            <param id="0" name="Audio file">TECH WEAPON Gun Shot Phaser Down 02</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;shoot1&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="814943460291830" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="6" name="Stop" sid="363596409237828" type="Audio">
+                            <param id="0" name="Tag">&quot;shoot1&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -194,6 +235,23 @@
                     <actions>
                         <action behavior="8Direction" id="7" name="Simulate control" sid="305346598415392" type="Player2">
                             <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="3" name="Set volume" sid="620527679831340" type="Audio">
+                            <param id="0" name="Tag">&quot;motor2&quot;</param>
+                            <param id="1" name="dB">-3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="531408784565646">
+                    <conditions>
+                        <condition id="3" name="On key released" sid="358078143340381" type="Keyboard">
+                            <param id="0" name="Key">38 (Up arrow)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set volume" sid="126653367001711" type="Audio">
+                            <param id="0" name="Tag">&quot;motor2&quot;</param>
+                            <param id="1" name="dB">-15</param>
                         </action>
                     </actions>
                 </event-block>
@@ -235,6 +293,12 @@
                             <param id="0" name="Object">Laser</param>
                             <param id="1" name="Layer">2</param>
                             <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Play" sid="255130860217471" type="Audio">
+                            <param id="0" name="Audio file">TECH WEAPON Gun Shot Phaser Down 02</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;shoot2&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -792,6 +856,12 @@
                         <action id="-15" name="Set visible" sid="516584318741519" type="PlayText">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action id="0" name="Play" sid="810853790832667" type="Audio">
+                            <param id="0" name="Audio file">EXPLOSION Bang 04</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="750020551642449">
@@ -824,6 +894,12 @@
                         </action>
                         <action id="-15" name="Set visible" sid="404637134083269" type="PlayText">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="116459406891240" type="Audio">
+                            <param id="0" name="Audio file">EXPLOSION Bang 04</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -900,6 +976,12 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="995578640223856" type="Enemy1" />
                         <action id="-9" name="Destroy" sid="420867329434071" type="Laser" />
+                        <action id="0" name="Play" sid="765512406434179" type="Audio">
+                            <param id="0" name="Audio file">EXPLOSION Bang 04</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="115046295020114">
@@ -911,6 +993,12 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="636434466321161" type="Enemy2" />
                         <action id="-9" name="Destroy" sid="821368787390073" type="Laser" />
+                        <action id="0" name="Play" sid="611047080559698" type="Audio">
+                            <param id="0" name="Audio file">EXPLOSION Bang 04</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="349308931225411">
@@ -922,6 +1010,12 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="830677844022400" type="Enemy3" />
                         <action id="-9" name="Destroy" sid="337762834665062" type="Laser" />
+                        <action id="0" name="Play" sid="383055357406835" type="Audio">
+                            <param id="0" name="Audio file">EXPLOSION Bang 04</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="238555442693352">
@@ -933,6 +1027,12 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="183337397665818" type="Enemy4" />
                         <action id="-9" name="Destroy" sid="880051677376176" type="Laser" />
+                        <action id="0" name="Play" sid="387241127953903" type="Audio">
+                            <param id="0" name="Audio file">EXPLOSION Bang 04</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="194159883077343">
@@ -944,6 +1044,12 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="671178625771657" type="Enemy5" />
                         <action id="-9" name="Destroy" sid="758407194338056" type="Laser" />
+                        <action id="0" name="Play" sid="581235302729840" type="Audio">
+                            <param id="0" name="Audio file">EXPLOSION Bang 04</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="207005490990712">
@@ -955,6 +1061,12 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="668862198487641" type="fuel" />
                         <action id="-9" name="Destroy" sid="198721150010081" type="Laser" />
+                        <action id="0" name="Play" sid="207742979319834" type="Audio">
+                            <param id="0" name="Audio file">EXPLOSION Bang 04</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -969,6 +1081,12 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="604017842191431" type="boost" />
+                        <action id="0" name="Play" sid="134509222544387" type="Audio">
+                            <param id="0" name="Audio file">RETRO Jump Up Bounce Long 03</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action behavior="8Direction" id="4" name="Set max speed" sid="869874307011663" type="Player1">
                             <param id="0" name="Max Speed">Self.8Direction.MaxSpeed+150</param>
                         </action>
@@ -988,6 +1106,12 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="978278636697454" type="boost" />
+                        <action id="0" name="Play" sid="356262728663961" type="Audio">
+                            <param id="0" name="Audio file">RETRO Jump Up Bounce Long 03</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action behavior="8Direction" id="4" name="Set max speed" sid="415850714547935" type="Player2">
                             <param id="0" name="Max Speed">Self.8Direction.MaxSpeed+150</param>
                         </action>
@@ -1065,6 +1189,12 @@
                             <param id="0" name="Instance variable">Fuel</param>
                             <param id="1" name="Value">Self.Fuel + 5</param>
                         </action>
+                        <action id="0" name="Play" sid="530580205800817" type="Audio">
+                            <param id="0" name="Audio file">TECH CHARGER Power Up 06</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;refuel1&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="932051853747665">
@@ -1080,6 +1210,36 @@
                         <action id="-10" name="Set value" sid="726875622184897" type="Player2">
                             <param id="0" name="Instance variable">Fuel</param>
                             <param id="1" name="Value">Self.Fuel + 5</param>
+                        </action>
+                        <action id="0" name="Play" sid="669490455146411" type="Audio">
+                            <param id="0" name="Audio file">TECH CHARGER Power Up 06</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;refuel2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="295296501412179">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="279298424986008" type="Player1">
+                            <param id="0" name="Object">fuel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="500593808650021" type="Audio">
+                            <param id="0" name="Tag">&quot;refuel1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="117787157295472">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="234914052641346" type="Player2">
+                            <param id="0" name="Object">fuel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="763632835509941" type="Audio">
+                            <param id="0" name="Tag">&quot;refuel2&quot;</param>
                         </action>
                     </actions>
                 </event-block>
